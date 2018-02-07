@@ -9,12 +9,19 @@ public class player_movement : MonoBehaviour {
     public bool isGrounded = true;
     public Text countText;
     public Text cloutText;
-    public int count;
 
     private int playerSpeed = 10;
     private int playerJumpPower = 1700;
     private float moveX;
     private bool facingRight = true;
+    public int count;
+
+
+	//shooting stuff
+	public Transform GunBarrel;
+	public GameObject mixTape;
+	private float fireRate = 0.5f;
+	private float coolDown = 0f;
 
 	void Start()
     {
@@ -28,7 +35,24 @@ public class player_movement : MonoBehaviour {
     void Update () {
         PlayerMove();
 
-    }
+
+		//shooting stuff
+		if (Input.GetAxisRaw ("Fire1")>0) {
+			FireMixtape ();
+		}
+	}
+
+	//shooting stuff
+	void FireMixtape(){
+		if (Time.time > coolDown) {
+			coolDown = Time.time + fireRate;
+			if (facingRight) {
+				Instantiate (mixTape, GunBarrel.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+			} else if (!facingRight) {
+				Instantiate (mixTape, GunBarrel.position, Quaternion.Euler (new Vector3 (0, 0, 180f)));
+			}
+		}
+	}
 
     void PlayerMove()
     {

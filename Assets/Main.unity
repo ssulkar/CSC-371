@@ -261,6 +261,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abaa15c1a7f76084a8c545c8308a4bb8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &158435764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 158435765}
+  m_Layer: 0
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &158435765
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158435764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.61, y: -0.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475301820}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &201776533 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4125848277279834, guid: f7207e5612c5b5345adfd3c69a47f6e0,
@@ -524,7 +552,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.72, y: 1.26, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 158435765}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -543,6 +572,8 @@ MonoBehaviour:
   countText: {fileID: 898450098}
   cloutText: {fileID: 948671034}
   count: 0
+  GunBarrel: {fileID: 158435765}
+  mixTape: {fileID: 1849353095410992, guid: 8fb5177e6bfea664c86469972419ed4b, type: 2}
 --- !u!114 &475301822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,8 +632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64bc85e842e5c54dae92e653e39a357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winSound: {fileID: 8300000, guid: f00bfdc1c99d4084a93f317dc9dea62b, type: 3}
-  volume: 0.33
+  winSound: {fileID: 0}
+  volume: 0
   alreadyPlayed: 0
 --- !u!82 &578799656
 AudioSource:
@@ -900,10 +931,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57b799b54ae3a9469b5f9f324c85040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: -100
-  xMax: 100
-  yMin: -20
-  yMax: 100
+  xMin: 0
+  xMax: 0
+  yMin: 0
+  yMax: 0
 --- !u!1 &898450096
 GameObject:
   m_ObjectHideFlags: 0
