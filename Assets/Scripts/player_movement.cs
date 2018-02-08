@@ -34,8 +34,6 @@ public class player_movement : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         PlayerMove();
-
-
 		//shooting stuff
 		if (Input.GetAxisRaw ("Fire1")>0) {
 			FireMixtape ();
