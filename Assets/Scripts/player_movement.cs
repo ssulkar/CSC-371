@@ -107,6 +107,8 @@ public class player_movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             count++;
             SetCountText();
+			TimeController.instance.AfterFinish ();
+			StartCoroutine(TestCoroutine());
         }
         else if(other.gameObject.CompareTag ("enemy"))
         {
@@ -123,4 +125,12 @@ public class player_movement : MonoBehaviour {
             cloutText.text = "Clout Acquired";
         }
     }
+
+	IEnumerator TestCoroutine()
+	{
+
+		yield return new WaitForSeconds(3);
+		SceneManager.LoadScene("Main");
+
+	}
 }
