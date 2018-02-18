@@ -5,7 +5,7 @@ using UnityEngine;
 public class projectileDestroyer : MonoBehaviour {
 
 	public float lifeSpan;
-	// Use this for initialization
+
 	void Awake () {
 		Destroy(gameObject, lifeSpan);
 	}
@@ -13,5 +13,9 @@ public class projectileDestroyer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void destroyNow(){
+		Destroy (gameObject);
 	}
 }
