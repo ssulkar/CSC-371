@@ -18,19 +18,14 @@ public class projectileController : MonoBehaviour {
 		direction.Normalize ();
 
 		projectileRb.AddForce (new Vector2 (direction.x, direction.y + 0.5f) * projectileSpeed, ForceMode2D.Impulse);
-		//projectileRb.velocity = direction * projectileSpeed;
 	}
-	/*void Awake () {
-		projectileRb = GetComponent<Rigidbody2D> ();
-		if (transform.localRotation.z > 0) {
-			projectileRb.AddForce (new Vector2 (1, 0.5f) * projectileSpeed, ForceMode2D.Impulse);
-		} else {
-			projectileRb.AddForce (new Vector2 (-1, 0.5f) * projectileSpeed, ForceMode2D.Impulse);
-		}
-	}*/
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void stopProjectile(){
+		projectileRb.velocity = new Vector2(0, 0);
 	}
 }

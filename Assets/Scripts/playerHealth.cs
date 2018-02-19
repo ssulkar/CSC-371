@@ -5,33 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class playerHealth : MonoBehaviour {
 
-    public int health;
-    public bool hasDied;
-    public GameObject deathParticle;
-    public GameObject respawnParticle;
+	public float playerMaxHealth;
+	private float currentHealth;
 
-    private player_movement player;
+	private player_movement playerMov;
 
-    // Use this for initialization
-    void Start () {
-        hasDied = false;
-
-        player = FindObjectOfType<player_movement>();
+	void Start (){
+		currentHealth = playerMaxHealth;
+		playerMov = GetComponent<player_movement> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(gameObject.transform.position.y < -7)
-        {
-            
-            hasDied = true;
-        }
 
-        if(hasDied == true)
-        {
-            Instantiate(deathParticle, player.transform.position, player.transform.rotation);
-            SceneManager.LoadScene("Main");
-            Instantiate(respawnParticle, player.transform.position, player.transform.rotation);
-        }
+	void Update() {
+		if (transform.position.y < -7) {
+			playerDeath ();
+		}
+	}
+
+	public void addDamage(float damage){
+		currentHealth -= damage;
+		if (currentHealth <= 0) {
+			playerDeath ();
+		}
+	}
+
+	void playerDeath () {
+		SceneManager.LoadScene("Level1");
 	}
 }
