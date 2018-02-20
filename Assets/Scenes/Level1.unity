@@ -562,8 +562,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &475301818
-BoxCollider2D:
+--- !u!58 &475301818
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -574,19 +574,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.53750515, y: -0.06323624}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.26, y: 6.89}
-    newSize: {x: 6.26, y: 6.89}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.75}
   serializedVersion: 2
-  m_Size: {x: 5.3979473, y: 6.854121}
-  m_EdgeRadius: 0
+  m_Radius: 2.75
 --- !u!212 &475301819
 SpriteRenderer:
   m_ObjectHideFlags: 0
