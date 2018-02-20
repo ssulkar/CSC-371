@@ -14,10 +14,19 @@ public class enemyMovement : MonoBehaviour {
 		rb2d.freezeRotation = true;
 		min=transform.position.x;
 		max=transform.position.x+12;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position =new Vector2(Mathf.PingPong(Time.time*2,max-min)+min, transform.position.y);
-	}
+        transform.position =new Vector2(Mathf.PingPong(Time.time*2,max-min)+min, transform.position.y);
+
+    }
+    
+
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        Vector2 dir = gameObject.GetComponent<Rigidbody2D>().velocity;
+        dir.x = dir.x * -1;
+        gameObject.GetComponent<Rigidbody2D>().velocity = dir;
+    }
 }
