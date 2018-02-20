@@ -107,8 +107,11 @@ public class player_movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             count++;
             SetCountText();
-			TimeController.instance.AfterFinish ();
-			StartCoroutine(TestCoroutine());
+        }
+        else if (other.gameObject.CompareTag("finish"))
+        {
+            TimeController.instance.AfterFinish();
+            StartCoroutine(TestCoroutine());
         }
         else if(other.gameObject.CompareTag ("enemy"))
         {
@@ -130,7 +133,7 @@ public class player_movement : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds(3);
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene("Level1");
 
 	}
 }
