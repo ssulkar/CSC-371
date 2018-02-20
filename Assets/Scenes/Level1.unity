@@ -640,7 +640,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 807346880}
-  playerJumpPower: 25
+  playerJumpPower: 45
   GunBarrel: {fileID: 158435765}
   mixTape: {fileID: 1849353095410992, guid: 8fb5177e6bfea664c86469972419ed4b, type: 2}
 --- !u!114 &475301822
@@ -5701,7 +5701,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807346879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.58, z: 0}
+  m_LocalPosition: {x: 0, y: -3.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 475301820}

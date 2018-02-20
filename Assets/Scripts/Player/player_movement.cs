@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -41,11 +41,11 @@ public class player_movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		PlayerMove();
+		Jump();
 		//shooting stuff
 		if (Input.GetAxisRaw ("Fire1")>0) {
 			FireMixtape ();
 		}
-		Jump ();
 	}
 
 	//shooting stuff
@@ -62,7 +62,7 @@ public class player_movement : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		Jump();
+		
 	}
 
 	void PlayerMove()
@@ -95,6 +95,7 @@ public class player_movement : MonoBehaviour {
 	void Jump(){
 		if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
 			isGrounded = false;
+			//GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
 			GetComponent<Rigidbody2D>().AddForce(transform.up * playerJumpPower, ForceMode2D.Impulse);
 		}
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, groundLayer);
