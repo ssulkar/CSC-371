@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemSpaceController : MonoBehaviour {
 
     public const int numItems = 8;
-    public Item[] items = new Item[numItems];
+	public Item[] items = new Item[numItems];
     public bool[] inInventory = new bool[numItems];
 
     private Inventory inventory;

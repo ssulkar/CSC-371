@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42db0b5915736eb4c982739cbc2685b6, type: 3}
-  m_Name: item4
+  m_Script: {fileID: 11500000, guid: 21e6a23ba4b0aa84f81c0781ae74dd7d, type: 3}
+  m_Name: dreadlocks
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6bd71b9f11f45a642b3d81a3e7184470, type: 3}
+  sprite: {fileID: 21300000, guid: cbfa800c16379d0478b7c1f3c16831b9, type: 3}
   itemObject: {fileID: 0}
