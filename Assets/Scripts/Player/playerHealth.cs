@@ -26,7 +26,11 @@ public class playerHealth : MonoBehaviour {
 
 	public void addDamage(float damage){
 		currentHealth -= damage;
+
+		//controls how filled the health bar is
 		healthBar.fillAmount = (currentHealth / playerMaxHealth);
+	
+		//if else block controls color of the health bar
 		if ((currentHealth / playerMaxHealth) > (2.0f / 3)) {
 			healthBar.color = Color.green;
 		} else if ((currentHealth / playerMaxHealth) > (1.0f / 3)) {
@@ -34,6 +38,7 @@ public class playerHealth : MonoBehaviour {
 		} else {
 			healthBar.color = Color.red;
 		}
+
 		if (currentHealth <= 0) {
 			playerDeath ();
 		}

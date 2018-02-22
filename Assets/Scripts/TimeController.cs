@@ -12,7 +12,6 @@ public class TimeController : MonoBehaviour {
 	public Text Platinum;						
 	public Text Clock;
 	public Text winText;
-	//public Text scoreText;
 
 	public Image gol;
 	public Image sil;
@@ -39,24 +38,26 @@ public class TimeController : MonoBehaviour {
 			Destroy (gameObject);
 	}
 
-	// Use this for initialization
-	void Start () {
-		winText.enabled = false;
 
+	void Start () {
+
+		winText.enabled = false;
 		done = false;
 
-		//scoreText.text = "Score: " + score.ToString ();
+		//set the amount of time alloted
 		Silver.text = "Silver: " + silverTime.ToString () + " seconds";
 		Gold.text = "Gold: " + goldTime.ToString () + " seconds";
 		Platinum.text = "Platinum: " + platinumTime.ToString ()+ " seconds";
 	}
 
-	// Update is called once per frame
+
 	void Update () {
-		//scoreText.text = "Score: " + score.ToString ();
+
+		//update and display the clock time
 		clockTime = clockTime + Time.deltaTime;
 		Clock.text = ((int)clockTime).ToString();
 
+		//check each of the times to see if they have expired
 		if (clockTime > silverTime) {
 			Silver.color = Color.red;
 			sil.enabled = false;
@@ -72,9 +73,13 @@ public class TimeController : MonoBehaviour {
 	}
 
 	public void AfterFinish (){
+		//ensure we dont hit finish twice
 		if (done == true)
 			return;
 		Clock.enabled = false;
+
+		//if else block to display to the player what time goal they hit
+		//should also be used in the future to award experience to the player
 		if (clockTime <= platinumTime) {
 			//score = score + 1000;
 			winText.text = "Platinum Time Acheived +1000 score!!";
@@ -94,6 +99,7 @@ public class TimeController : MonoBehaviour {
 		else{
 			winText.text = "You're gona have to be faster than that";
 		}
+		//to ensure we dont pass any more time goals
 		clockTime = -10000;
 		done = true;
 	}
