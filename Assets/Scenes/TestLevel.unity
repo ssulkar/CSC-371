@@ -1409,7 +1409,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &755486274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1479,7 +1479,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  updatedSpeed: 0
   pushForce: 3
+  max_force: 0
+  max_speed: 0
 --- !u!1 &795698785
 GameObject:
   m_ObjectHideFlags: 0
