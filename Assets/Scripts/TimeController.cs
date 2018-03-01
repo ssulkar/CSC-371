@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour {
-
 	public static TimeController instance;	
 
 	public Text Silver;						
@@ -23,6 +22,7 @@ public class TimeController : MonoBehaviour {
 	public int platinumTime;
 
 	private bool done;
+	private const string enableKey = "LevelComplete_1";
 
 	void Awake()
 	{
@@ -40,6 +40,18 @@ public class TimeController : MonoBehaviour {
 
 
 	void Start () {
+		// don't show timer stuff first time through level
+		// enableKey is set at end of level
+		// enableKey is cleared by menu when new game is started
+		if (PlayerPrefs.GetInt(enableKey) == 0) {
+			Silver.enabled = false;
+			Gold.enabled = false;
+			Platinum.enabled = false;
+			Clock.enabled = false;
+			gol.enabled = false;
+			sil.enabled = false;
+			plat.enabled = false;
+		}
 
 		winText.enabled = false;
 		done = false;
@@ -102,6 +114,9 @@ public class TimeController : MonoBehaviour {
 		//to ensure we dont pass any more time goals
 		clockTime = -10000;
 		done = true;
+
+		// allow the timers to come back
+		PlayerPrefs.SetInt(enableKey, 1);
 	}
 
 
