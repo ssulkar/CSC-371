@@ -9,11 +9,13 @@ public class player_movement : MonoBehaviour {
 
 	public Text countText;
 	public Text cloutText;
+	public Text moneyText;
 
 	private int playerSpeed = 10;
 	private float moveX;
-	private bool facingRight = true;
+	private bool facingRight;
 	public int count;
+	public int money;
 
 
 
@@ -30,16 +32,29 @@ public class player_movement : MonoBehaviour {
 	private float fireRate = 0.5f;
 	private float coolDown = 0f;
 
+	//Animations
+	private Animator playerAnim;
+
 	void Start()
 	{
 		count = 0;
 		cloutText.text = "";
 		SetCountText();
+
+		money = 0;
+		moneyText.text = "";
+		SetMoneyText ();
+
+
+		facingRight = true;
+		playerAnim = GetComponent<Animator> ();
 	}
 
 
 	// Update is called once per frame
 	void Update () {
+		float currentSpeed = Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x);
+		playerAnim.SetFloat ("speed", Mathf.Abs(currentSpeed));
 		PlayerMove();
 		Jump();
 		//shooting stuff
@@ -68,20 +83,16 @@ public class player_movement : MonoBehaviour {
 	void PlayerMove()
 	{
 		//CONTROLS
-		moveX = Input.GetAxis( "Horizontal");
+		float moveX = Input.GetAxis( "Horizontal");
 
 		//ANIMATIONS
 
 		//PLAYER DIRECTION
-		if(moveX < 0.0f && facingRight == false)
-		{
-			FlipPlayer();
+		if (moveX < 0.0f && facingRight == true) {
+			FlipPlayer ();
+		} else if (moveX > 0.0f && facingRight == false) {
+			FlipPlayer ();
 		}
-		else if(moveX > 0.0f && facingRight == true)
-		{
-			FlipPlayer();
-		}
-
 		//PHYSICS
 		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 	}
@@ -97,8 +108,11 @@ public class player_movement : MonoBehaviour {
 			isGrounded = false;
 			//GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
 			GetComponent<Rigidbody2D>().AddForce(transform.up * playerJumpPower, ForceMode2D.Impulse);
+			playerAnim.SetBool ("isGrounded", false);
 		}
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, groundLayer);
+		playerAnim.SetBool ("isGrounded", isGrounded);
+		playerAnim.SetFloat ("verticalSpeed", GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 
@@ -126,6 +140,15 @@ public class player_movement : MonoBehaviour {
 			count++;
 			SetCountText();
 		}
+
+		else if (other.gameObject.CompareTag ("Money"))
+		{
+			other.gameObject.SetActive(false);
+			money+=100;
+			SetMoneyText ();
+			Destroy (other);
+		}
+
 		else if (other.gameObject.CompareTag("finish"))
 		{
 			TimeController.instance.AfterFinish();
@@ -145,6 +168,11 @@ public class player_movement : MonoBehaviour {
 		{
 			cloutText.text = "Clout Acquired";
 		}
+	}
+
+
+	void SetMoneyText() {
+		moneyText.text = "$ " + money.ToString ();
 	}
 
 	IEnumerator TestCoroutine()

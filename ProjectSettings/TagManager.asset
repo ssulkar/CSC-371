@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - Enemy
   - finish
+  - Money
   layers:
   - Default
   - TransparentFX
