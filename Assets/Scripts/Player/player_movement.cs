@@ -9,11 +9,13 @@ public class player_movement : MonoBehaviour {
 
 	public Text countText;
 	public Text cloutText;
+	public Text moneyText;
 
 	private int playerSpeed = 10;
 	private float moveX;
 	private bool facingRight;
 	public int count;
+	public int money;
 
 
 
@@ -38,6 +40,12 @@ public class player_movement : MonoBehaviour {
 		count = 0;
 		cloutText.text = "";
 		SetCountText();
+
+		money = 0;
+		moneyText.text = "";
+		SetMoneyText ();
+
+
 		facingRight = true;
 		playerAnim = GetComponent<Animator> ();
 	}
@@ -132,6 +140,15 @@ public class player_movement : MonoBehaviour {
 			count++;
 			SetCountText();
 		}
+
+		else if (other.gameObject.CompareTag ("Money"))
+		{
+			other.gameObject.SetActive(false);
+			money+=100;
+			SetMoneyText ();
+			Destroy (other);
+		}
+
 		else if (other.gameObject.CompareTag("finish"))
 		{
 			TimeController.instance.AfterFinish();
@@ -151,6 +168,11 @@ public class player_movement : MonoBehaviour {
 		{
 			cloutText.text = "Clout Acquired";
 		}
+	}
+
+
+	void SetMoneyText() {
+		moneyText.text = "$ " + money.ToString ();
 	}
 
 	IEnumerator TestCoroutine()

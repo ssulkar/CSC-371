@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyHealth : MonoBehaviour {
 
 	public float enemyMaxHealth;
+	public GameObject money;
 
 	private float currentHealth;
 	// Use this for initialization
@@ -27,6 +28,7 @@ public class enemyHealth : MonoBehaviour {
 	}
 
 	void enemyDeath () {
+		Instantiate (money, transform.position, transform.rotation);
 		Destroy (gameObject);
 	}
 }
