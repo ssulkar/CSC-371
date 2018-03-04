@@ -46,3 +46,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 1673568085
+    locked: 0
+  - name: players
+    uniqueID: 2163391709
+    locked: 0
+  - name: dialogue box
+    uniqueID: 1982982157
+    locked: 0
+  - name: dialogue
+    uniqueID: 686974387
+    locked: 0
