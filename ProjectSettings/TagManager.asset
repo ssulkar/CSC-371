@@ -47,6 +47,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Front
     uniqueID: 3251731991
+=======
+  - name: background
+    uniqueID: 1673568085
+    locked: 0
+  - name: players
+    uniqueID: 2163391709
+    locked: 0
+  - name: dialogue box
+    uniqueID: 1982982157
+    locked: 0
+  - name: dialogue
+    uniqueID: 686974387
+>>>>>>> afe9a64a341b2951a5e69351d4cbc493ae0cf8fd
     locked: 0

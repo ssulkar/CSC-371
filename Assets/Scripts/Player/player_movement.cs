@@ -158,7 +158,7 @@ public class player_movement : MonoBehaviour {
 		}
 		else if(other.gameObject.CompareTag ("enemy"))
 		{
-			SceneManager.LoadScene("Main");
+			SceneManager.LoadScene("Menu(inbetween)");
 		}
 	}
 
@@ -198,7 +198,12 @@ public class player_movement : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds(3);
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("Menu(inbetween)");
 
 	}
+
+    public void reloadCurrentScene()
+    {
+
+    }
 }
