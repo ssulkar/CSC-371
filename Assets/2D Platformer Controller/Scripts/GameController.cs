@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public Text score1;
-	public Text score2;
-	public Text score3;
+	public Text level;
+	public Text money;
 
 	// Use this for initialization
 	void Start () {
-
+		level.text = "Clout Level: " + PlayerPrefs.GetInt ("level");
+		money.text = "Money: $" + PlayerPrefs.GetInt ("money");
 	}
 	
 	// Update is called once per frame

@@ -138,13 +138,15 @@ public class player_movement : MonoBehaviour {
 		{
 			other.gameObject.SetActive(false);
 			count++;
+			PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers", 0) + 10);
 			SetCountText();
 		}
 
 		else if (other.gameObject.CompareTag ("Money"))
 		{
 			other.gameObject.SetActive(false);
-			money+=100;
+			PlayerPrefs.SetInt ("money", PlayerPrefs.GetInt ("money", 0) + 100);
+			checkLevelUp ();
 			SetMoneyText ();
 			Destroy (other);
 		}
@@ -160,9 +162,26 @@ public class player_movement : MonoBehaviour {
 		}
 	}
 
+	void checkLevelUp()
+	{
+		// Check if Player Leveled up
+		// Need to display this to the player
+		if (PlayerPrefs.GetInt ("level") > 0) {
+			if (PlayerPrefs.GetInt ("followers") >= PlayerPrefs.GetInt ("level") * 100) {
+				PlayerPrefs.SetInt ("followers", 0);
+				PlayerPrefs.SetInt ("level", PlayerPrefs.GetInt ("level") + 1);
+			}	
+		} else {
+			if (PlayerPrefs.GetInt ("followers") >= 50) {
+				PlayerPrefs.SetInt ("followers", 0);
+				PlayerPrefs.SetInt ("level", PlayerPrefs.GetInt ("level") + 1);
+			}
+		}
+	}
+
 	void SetCountText()
 	{
-		countText.text = "Clout: " + count.ToString();
+		countText.text = "Clout: " + PlayerPrefs.GetInt("followers").ToString();
 
 		if(count == 1)
 		{
@@ -172,7 +191,7 @@ public class player_movement : MonoBehaviour {
 
 
 	void SetMoneyText() {
-		moneyText.text = "$ " + money.ToString ();
+		moneyText.text = "$ " + PlayerPrefs.GetInt("money").ToString ();
 	}
 
 	IEnumerator TestCoroutine()
