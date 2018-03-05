@@ -139,6 +139,7 @@ public class player_movement : MonoBehaviour {
 			other.gameObject.SetActive(false);
 			count++;
 			PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers", 0) + 10);
+			checkLevelUp ();
 			SetCountText();
 		}
 
@@ -146,7 +147,6 @@ public class player_movement : MonoBehaviour {
 		{
 			other.gameObject.SetActive(false);
 			PlayerPrefs.SetInt ("money", PlayerPrefs.GetInt ("money", 0) + 100);
-			checkLevelUp ();
 			SetMoneyText ();
 			Destroy (other);
 		}

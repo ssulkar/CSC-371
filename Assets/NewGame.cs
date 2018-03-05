@@ -22,6 +22,8 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("followers", 0);
 		PlayerPrefs.SetInt ("level", 0);
 
+		PlayerPrefs.SetInt ("currentLevel", 1);
+
 		SceneManager.LoadScene ("Level1");
 	}
 }
