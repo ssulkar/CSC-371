@@ -115,8 +115,16 @@ public class TimeController : MonoBehaviour {
 		clockTime = -10000;
 		done = true;
 
+
+
 		// allow the timers to come back
 		PlayerPrefs.SetInt(enableKey, 1);
+
+
+		//CHANGE FOR EACH LEVEL
+		PlayerPrefs.SetInt ("currentLevel", 2);
+
+		SceneManager.LoadScene("Menu(inbetween)");
 	}
 
 

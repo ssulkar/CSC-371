@@ -16,6 +16,6 @@ public class ContinueClick : MonoBehaviour {
 
 	void TaskOnClick()
 	{
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel"));
 	}
 }
