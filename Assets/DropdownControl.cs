@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -37,35 +36,3 @@ public class DropdownControl : MonoBehaviour
 		myDropdown.value = index;
 	}
 }
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class DropdownControl : MonoBehaviour
-{
-
-	public Dropdown myDropdown;
-
-	void Start() {
-		myDropdown.onValueChanged.AddListener(delegate {
-			myDropdownValueChangedHandler(myDropdown);
-		});
-	}
-	void Destroy() {
-		myDropdown.onValueChanged.RemoveAllListeners();
-	}
-
-	private void myDropdownValueChangedHandler(Dropdown target) {
-		if (target.value == 1) {
-			SceneManager.LoadScene("Level1");
-		}
-	}
-
-	public void SetDropdownIndex(int index) {
-		myDropdown.value = index;
-	}
-}
->>>>>>> afe9a64a341b2951a5e69351d4cbc493ae0cf8fd

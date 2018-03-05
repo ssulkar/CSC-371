@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,30 +37,3 @@ public class MenuController : MonoBehaviour {
 		
 	}
 }
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class MenuController : MonoBehaviour {
-
-	public Text level;
-	public Text money;
-	public Image character;
-
-	// Use this for initialization
-	void Start () {
-		level.text = "Clout Level: " + PlayerPrefs.GetInt ("level");
-		money.text = "Money: " + PlayerPrefs.GetInt ("money");
-
-		//set the image to show the character
-		//Image.sprite = 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
->>>>>>> afe9a64a341b2951a5e69351d4cbc493ae0cf8fd
