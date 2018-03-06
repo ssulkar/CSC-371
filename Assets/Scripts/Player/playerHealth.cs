@@ -13,9 +13,17 @@ public class playerHealth : MonoBehaviour {
 
 	private player_movement playerMov;
 
+	private int cloutlvl;
+	private int fol;
+	private int money;
+
 	void Start (){
 		currentHealth = playerMaxHealth;
 		playerMov = GetComponent<player_movement> ();
+
+		cloutlvl = PlayerPrefs.GetInt ("level");
+		fol = PlayerPrefs.GetInt ("followers");
+		money = PlayerPrefs.GetInt ("money");
 	}
 
 	void Update() {
@@ -45,6 +53,9 @@ public class playerHealth : MonoBehaviour {
 	}
 
 	void playerDeath () {
+		PlayerPrefs.SetInt ("level", cloutlvl);
+		PlayerPrefs.SetInt ("followers", fol);
+		PlayerPrefs.SetInt ("money", money);
 		SceneManager.LoadScene("Level1");
 	}
 }

@@ -167,7 +167,7 @@ public class player_movement : MonoBehaviour {
 		// Check if Player Leveled up
 		// Need to display this to the player
 		if (PlayerPrefs.GetInt ("level") > 0) {
-			if (PlayerPrefs.GetInt ("followers") >= PlayerPrefs.GetInt ("level") * 100) {
+			if (PlayerPrefs.GetInt ("followers") >= (PlayerPrefs.GetInt ("level") * 100)) {
 				PlayerPrefs.SetInt ("followers", 0);
 				PlayerPrefs.SetInt ("level", PlayerPrefs.GetInt ("level") + 1);
 			}	

@@ -21,11 +21,13 @@ public class TimeController : MonoBehaviour {
 	public int goldTime;
 	public int platinumTime;
 
+	public GameObject allPickups;
+
 	private bool done;
 	private const string enableKey = "LevelComplete_1";
 
 	void Awake()
-	{
+	{ 
 		//If we don't currently have a game control...
 		if (instance == null) {
 			//...set this one to be it...
@@ -40,10 +42,13 @@ public class TimeController : MonoBehaviour {
 
 
 	void Start () {
+		//gets all the pickups to allow them to be disabled when timer is active
+		Transform[] allChildren = allPickups.GetComponentsInChildren<Transform>();
+
 		// don't show timer stuff first time through level
 		// enableKey is set at end of level
 		// enableKey is cleared by menu when new game is started
-		if (PlayerPrefs.GetInt(enableKey) == 0) {
+		if (PlayerPrefs.GetInt (enableKey) == 0) {
 			Silver.enabled = false;
 			Gold.enabled = false;
 			Platinum.enabled = false;
@@ -51,6 +56,12 @@ public class TimeController : MonoBehaviour {
 			gol.enabled = false;
 			sil.enabled = false;
 			plat.enabled = false;
+		}
+		//When timer is active we disable all the pickups
+		else {
+			foreach (Transform child in allChildren) {
+				child.gameObject.SetActive(false);
+			}
 		}
 
 		winText.enabled = false;
@@ -85,46 +96,56 @@ public class TimeController : MonoBehaviour {
 	}
 
 	public void AfterFinish (){
-		//ensure we dont hit finish twice
-		if (done == true)
-			return;
-		Clock.enabled = false;
+		if (PlayerPrefs.GetInt (enableKey) == 1) {
+			//ensure we dont hit finish twice
+			if (done == true)
+				return;
+			Clock.enabled = false;
 
-		//if else block to display to the player what time goal they hit
-		//should also be used in the future to award experience to the player
-		if (clockTime <= platinumTime) {
-			//score = score + 1000;
-			winText.text = "Platinum Time Acheived +1000 score!!";
-			winText.enabled = true;
+			//CHANGE TO REFLECT WHAT LEVEL THIS SCRIPT IS FOR
+			int levelNum = 1;
+			int followersGained;
+			//CHANGE FOR EACH LEVEL
+			PlayerPrefs.SetInt ("currentLevel", 2);
 
-		}
-		else if (clockTime <= goldTime) {
-			//score = score + 500;
-			winText.text = "Gold Time Acheived +500 score";
+			//if else block to display to the player what time goal they hit
+			//should also be used in the future to award experience to the player
+			if (clockTime <= platinumTime) {
+				//score = score + 1000;
+				followersGained = levelNum * 50;
+				winText.text = "Platinum Time Acheived, you gained " + followersGained.ToString () + " followers";
+				winText.enabled = true;
+				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
+			} else if (clockTime <= goldTime) {
+				//score = score + 500;
+				followersGained = levelNum * 25;
+				winText.text = "Gold Time Acheived, you gained " + followersGained.ToString () + " followers";
+				winText.enabled = true;
+				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
+			} else if (clockTime <= silverTime) {
+				//score = score + 100;
+				followersGained = levelNum * 10;
+				winText.text = "Silver Time Acheived, you gained " + followersGained.ToString () + " followers";
+				winText.enabled = true;
+				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
+			} else {
+				winText.text = "You're gona have to be faster than that";
+			}
+			//to ensure we dont pass any more time goals
+			clockTime = -10000;
+			done = true;
+		} else {
 			winText.enabled = true;
+			winText.text = "LEVEL COMPLETE";
 		}
-		else if (clockTime <= silverTime) {
-			//score = score + 100;
-			winText.text = "Silver Time Acheived +100 score";
-			winText.enabled = true;
-		}
-		else{
-			winText.text = "You're gona have to be faster than that";
-		}
-		//to ensure we dont pass any more time goals
-		clockTime = -10000;
-		done = true;
-
 
 
 		// allow the timers to come back
 		PlayerPrefs.SetInt(enableKey, 1);
 
 
-		//CHANGE FOR EACH LEVEL
-		PlayerPrefs.SetInt ("currentLevel", 2);
 
-		SceneManager.LoadScene("Menu(inbetween)");
+
 	}
 
 

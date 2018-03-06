@@ -25,7 +25,7 @@ public class MenuController : MonoBehaviour {
 
 		//code for followers bar
 		if (PlayerPrefs.GetInt ("level") > 0) {
-			followerBar.fillAmount = (PlayerPrefs.GetInt ("followers") / ((float)PlayerPrefs.GetInt ("level", 10) * 100));
+			followerBar.fillAmount = (PlayerPrefs.GetInt ("followers") / ((float)(PlayerPrefs.GetInt ("level", 10) * 100)));
 		} else {
 			followerBar.fillAmount = (PlayerPrefs.GetInt ("followers") / 50.0f);
 		}
