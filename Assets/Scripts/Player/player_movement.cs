@@ -9,11 +9,13 @@ public class player_movement : MonoBehaviour {
 
 	public Text countText;
 	public Text cloutText;
+	public Text moneyText;
 
 	private int playerSpeed = 10;
 	private float moveX;
-	private bool facingRight = true;
+	private bool facingRight;
 	public int count;
+	public int money;
 
 
 
@@ -30,16 +32,29 @@ public class player_movement : MonoBehaviour {
 	private float fireRate = 0.5f;
 	private float coolDown = 0f;
 
+	//Animations
+	private Animator playerAnim;
+
 	void Start()
 	{
 		count = 0;
 		cloutText.text = "";
 		SetCountText();
+
+		money = 0;
+		moneyText.text = "";
+		SetMoneyText ();
+
+
+		facingRight = true;
+		playerAnim = GetComponent<Animator> ();
 	}
 
 
 	// Update is called once per frame
 	void Update () {
+		float currentSpeed = Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x);
+		playerAnim.SetFloat ("speed", Mathf.Abs(currentSpeed));
 		PlayerMove();
 		Jump();
 		//shooting stuff
@@ -68,20 +83,16 @@ public class player_movement : MonoBehaviour {
 	void PlayerMove()
 	{
 		//CONTROLS
-		moveX = Input.GetAxis( "Horizontal");
+		float moveX = Input.GetAxis( "Horizontal");
 
 		//ANIMATIONS
 
 		//PLAYER DIRECTION
-		if(moveX < 0.0f && facingRight == false)
-		{
-			FlipPlayer();
+		if (moveX < 0.0f && facingRight == true) {
+			FlipPlayer ();
+		} else if (moveX > 0.0f && facingRight == false) {
+			FlipPlayer ();
 		}
-		else if(moveX > 0.0f && facingRight == true)
-		{
-			FlipPlayer();
-		}
-
 		//PHYSICS
 		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 	}
@@ -97,8 +108,11 @@ public class player_movement : MonoBehaviour {
 			isGrounded = false;
 			//GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
 			GetComponent<Rigidbody2D>().AddForce(transform.up * playerJumpPower, ForceMode2D.Impulse);
+			playerAnim.SetBool ("isGrounded", false);
 		}
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, groundLayer);
+		playerAnim.SetBool ("isGrounded", isGrounded);
+		playerAnim.SetFloat ("verticalSpeed", GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 
@@ -124,8 +138,19 @@ public class player_movement : MonoBehaviour {
 		{
 			other.gameObject.SetActive(false);
 			count++;
+			PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers", 0) + 10);
+			checkLevelUp ();
 			SetCountText();
 		}
+
+		else if (other.gameObject.CompareTag ("Money"))
+		{
+			other.gameObject.SetActive(false);
+			PlayerPrefs.SetInt ("money", PlayerPrefs.GetInt ("money", 0) + 100);
+			SetMoneyText ();
+			Destroy (other);
+		}
+
 		else if (other.gameObject.CompareTag("finish"))
 		{
 			TimeController.instance.AfterFinish();
@@ -133,13 +158,30 @@ public class player_movement : MonoBehaviour {
 		}
 		else if(other.gameObject.CompareTag ("enemy"))
 		{
-			SceneManager.LoadScene("Main");
+			SceneManager.LoadScene("Menu(inbetween)");
+		}
+	}
+
+	void checkLevelUp()
+	{
+		// Check if Player Leveled up
+		// Need to display this to the player
+		if (PlayerPrefs.GetInt ("level") > 0) {
+			if (PlayerPrefs.GetInt ("followers") >= PlayerPrefs.GetInt ("level") * 100) {
+				PlayerPrefs.SetInt ("followers", 0);
+				PlayerPrefs.SetInt ("level", PlayerPrefs.GetInt ("level") + 1);
+			}	
+		} else {
+			if (PlayerPrefs.GetInt ("followers") >= 50) {
+				PlayerPrefs.SetInt ("followers", 0);
+				PlayerPrefs.SetInt ("level", PlayerPrefs.GetInt ("level") + 1);
+			}
 		}
 	}
 
 	void SetCountText()
 	{
-		countText.text = "Clout: " + count.ToString();
+		countText.text = "Clout: " + PlayerPrefs.GetInt("followers").ToString();
 
 		if(count == 1)
 		{
@@ -147,11 +189,21 @@ public class player_movement : MonoBehaviour {
 		}
 	}
 
+
+	void SetMoneyText() {
+		moneyText.text = "$ " + PlayerPrefs.GetInt("money").ToString ();
+	}
+
 	IEnumerator TestCoroutine()
 	{
 
 		yield return new WaitForSeconds(3);
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("Menu(inbetween)");
 
 	}
+
+    public void reloadCurrentScene()
+    {
+
+    }
 }

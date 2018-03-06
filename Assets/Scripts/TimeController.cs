@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour {
-
 	public static TimeController instance;	
 
 	public Text Silver;						
@@ -12,7 +11,6 @@ public class TimeController : MonoBehaviour {
 	public Text Platinum;						
 	public Text Clock;
 	public Text winText;
-	//public Text scoreText;
 
 	public Image gol;
 	public Image sil;
@@ -24,6 +22,7 @@ public class TimeController : MonoBehaviour {
 	public int platinumTime;
 
 	private bool done;
+	private const string enableKey = "LevelComplete_1";
 
 	void Awake()
 	{
@@ -39,24 +38,38 @@ public class TimeController : MonoBehaviour {
 			Destroy (gameObject);
 	}
 
-	// Use this for initialization
-	void Start () {
-		winText.enabled = false;
 
+	void Start () {
+		// don't show timer stuff first time through level
+		// enableKey is set at end of level
+		// enableKey is cleared by menu when new game is started
+		if (PlayerPrefs.GetInt(enableKey) == 0) {
+			Silver.enabled = false;
+			Gold.enabled = false;
+			Platinum.enabled = false;
+			Clock.enabled = false;
+			gol.enabled = false;
+			sil.enabled = false;
+			plat.enabled = false;
+		}
+
+		winText.enabled = false;
 		done = false;
 
-		//scoreText.text = "Score: " + score.ToString ();
+		//set the amount of time alloted
 		Silver.text = "Silver: " + silverTime.ToString () + " seconds";
 		Gold.text = "Gold: " + goldTime.ToString () + " seconds";
 		Platinum.text = "Platinum: " + platinumTime.ToString ()+ " seconds";
 	}
 
-	// Update is called once per frame
+
 	void Update () {
-		//scoreText.text = "Score: " + score.ToString ();
+
+		//update and display the clock time
 		clockTime = clockTime + Time.deltaTime;
 		Clock.text = ((int)clockTime).ToString();
 
+		//check each of the times to see if they have expired
 		if (clockTime > silverTime) {
 			Silver.color = Color.red;
 			sil.enabled = false;
@@ -72,9 +85,13 @@ public class TimeController : MonoBehaviour {
 	}
 
 	public void AfterFinish (){
+		//ensure we dont hit finish twice
 		if (done == true)
 			return;
 		Clock.enabled = false;
+
+		//if else block to display to the player what time goal they hit
+		//should also be used in the future to award experience to the player
 		if (clockTime <= platinumTime) {
 			//score = score + 1000;
 			winText.text = "Platinum Time Acheived +1000 score!!";
@@ -94,8 +111,20 @@ public class TimeController : MonoBehaviour {
 		else{
 			winText.text = "You're gona have to be faster than that";
 		}
+		//to ensure we dont pass any more time goals
 		clockTime = -10000;
 		done = true;
+
+
+
+		// allow the timers to come back
+		PlayerPrefs.SetInt(enableKey, 1);
+
+
+		//CHANGE FOR EACH LEVEL
+		PlayerPrefs.SetInt ("currentLevel", 2);
+
+		SceneManager.LoadScene("Menu(inbetween)");
 	}
 
 

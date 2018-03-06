@@ -16,6 +16,7 @@ public class PlayClick : MonoBehaviour {
 
 	void TaskOnClick()
 	{
-		SceneManager.LoadScene("Level1");
+		PlayerPrefs.SetInt("LevelComplete_1", 0);
+		SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel"));
 	}
 }
