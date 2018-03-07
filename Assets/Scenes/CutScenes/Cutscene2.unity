@@ -224,7 +224,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2131575587
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ed6791c8c6d5c54fae20bbb41c04160, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -243,7 +243,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 460070300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.45, y: -2.8, z: 0}
+  m_LocalPosition: {x: 4.45, y: -2.8, z: -4.51}
   m_LocalScale: {x: 10.55113, y: 9.427685, z: 0.57906973}
   m_Children: []
   m_Father: {fileID: 0}
@@ -387,9 +387,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1673568085
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a9f6ff98cae9594894510bd80c0879c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01732db5bf48cca4893f88f664fd2aaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -407,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 771287488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.18, y: 0.01, z: 0}
-  m_LocalScale: {x: 2.6348283, y: 2.368384, z: 2.368384}
+  m_LocalScale: {x: 8.979523, y: 8.07148, z: 8.07148}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -469,10 +469,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 853ad6223e64b6d4dbab9860f99f9d75, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -495,12 +495,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 985759195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b8bc559db75b994091036a7c2350011, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dfb00e43f32a97478b0c85a0be5b3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - straight uppppppppppppppp
-  - LA FLAME
+  - 'FRIEND:  Yo!  Did  you  see  that  Lil  Pump  is  performing  at  Havard  at  3  today?!'
+  - 'YOU:  Really?!  Wow!  He  is  one  of  my  favorite  rappers!  Too  bad  we  have  class... '
+  - Otherwise  we  could  just  walk  to  the  concert  right  now
+  - 'FRIEND:  I  mean  we  could  always  ditch  school.....'
+  - 'YOU:  We  got  to  go  now  then!  Hurry!'
   delay: 0
   multiplier: 0
   DialogueInput: 32
@@ -738,7 +741,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2131575587
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e4c5592e322a53749bc15036ce822e2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -757,7 +760,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547550046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.19, y: -2.57, z: 0}
+  m_LocalPosition: {x: -8.19, y: -2.57, z: -7.05}
   m_LocalScale: {x: 10.204089, y: 10.204094, z: 10.204094}
   m_Children: []
   m_Father: {fileID: 0}

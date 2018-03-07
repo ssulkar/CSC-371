@@ -134,32 +134,36 @@ public class player_movement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.gameObject.CompareTag ("token"))
-		{
-			other.gameObject.SetActive(false);
-			count++;
-			PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers", 0) + 10);
-			checkLevelUp ();
-			SetCountText();
-		}
+        if (other.gameObject.CompareTag("token"))
+        {
+            other.gameObject.SetActive(false);
+            count++;
+            PlayerPrefs.SetInt("followers", PlayerPrefs.GetInt("followers", 0) + 10);
+            checkLevelUp();
+            SetCountText();
+        }
 
-		else if (other.gameObject.CompareTag ("Money"))
-		{
-			other.gameObject.SetActive(false);
-			PlayerPrefs.SetInt ("money", PlayerPrefs.GetInt ("money", 0) + 100);
-			SetMoneyText ();
-			Destroy (other);
-		}
+        else if (other.gameObject.CompareTag("Money"))
+        {
+            other.gameObject.SetActive(false);
+            PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money", 0) + 100);
+            SetMoneyText();
+            Destroy(other);
+        }
+        else if (other.gameObject.CompareTag("music"))
+        {
+            other.gameObject.SetActive(false);
+        }
 
-		else if (other.gameObject.CompareTag("finish"))
-		{
-			TimeController.instance.AfterFinish();
-			StartCoroutine(TestCoroutine());
-		}
-		else if(other.gameObject.CompareTag ("enemy"))
-		{
-			SceneManager.LoadScene("Menu(inbetween)");
-		}
+        else if (other.gameObject.CompareTag("finish"))
+        {
+            TimeController.instance.AfterFinish();
+            StartCoroutine(TestCoroutine());
+        }
+        else if (other.gameObject.CompareTag("enemy"))
+        {
+            SceneManager.LoadScene("Menu(inbetween)");
+        }
 	}
 
 	void checkLevelUp()
