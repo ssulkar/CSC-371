@@ -21,10 +21,13 @@ public class TimeController : MonoBehaviour {
 	public int goldTime;
 	public int platinumTime;
 
+	public string lvlComplete;
+	public int lvlNum;
+
 	public GameObject allPickups;
 
 	private bool done;
-	private const string enableKey = "LevelComplete_1";
+	private string enableKey;
 
 	void Awake()
 	{ 
@@ -42,6 +45,8 @@ public class TimeController : MonoBehaviour {
 
 
 	void Start () {
+		enableKey = lvlComplete;
+
 		//gets all the pickups to allow them to be disabled when timer is active
 		Transform[] allChildren = allPickups.GetComponentsInChildren<Transform>();
 
@@ -103,28 +108,26 @@ public class TimeController : MonoBehaviour {
 			Clock.enabled = false;
 
 			//CHANGE TO REFLECT WHAT LEVEL THIS SCRIPT IS FOR
-			int levelNum = 1;
 			int followersGained;
 			//CHANGE FOR EACH LEVEL
-			PlayerPrefs.SetInt ("currentLevel", 2);
 
 			//if else block to display to the player what time goal they hit
 			//should also be used in the future to award experience to the player
 			if (clockTime <= platinumTime) {
 				//score = score + 1000;
-				followersGained = levelNum * 50;
+				followersGained = lvlNum * 50;
 				winText.text = "Platinum Time Acheived, you gained " + followersGained.ToString () + " followers";
 				winText.enabled = true;
 				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
 			} else if (clockTime <= goldTime) {
 				//score = score + 500;
-				followersGained = levelNum * 25;
+				followersGained = lvlNum * 25;
 				winText.text = "Gold Time Acheived, you gained " + followersGained.ToString () + " followers";
 				winText.enabled = true;
 				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
 			} else if (clockTime <= silverTime) {
 				//score = score + 100;
-				followersGained = levelNum * 10;
+				followersGained = lvlNum * 10;
 				winText.text = "Silver Time Acheived, you gained " + followersGained.ToString () + " followers";
 				winText.enabled = true;
 				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
@@ -137,6 +140,10 @@ public class TimeController : MonoBehaviour {
 		} else {
 			winText.enabled = true;
 			winText.text = "LEVEL COMPLETE";
+		}
+
+		if (PlayerPrefs.GetInt ("currentLevel") <= lvlNum + 1) {
+			PlayerPrefs.SetInt ("currentLevel", lvlNum + 1);
 		}
 
 
