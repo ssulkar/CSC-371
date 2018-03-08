@@ -10520,7 +10520,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881327728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -86.58127, y: 97.50909, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11008,7 +11008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.665833, y: -15.508972}
+  m_AnchoredPosition: {x: -16.665771, y: -15.508972}
   m_SizeDelta: {x: 248.48, y: 20.997}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1211172647
@@ -11453,7 +11453,9 @@ MonoBehaviour:
   silverTime: 50
   goldTime: 40
   platinumTime: 30
-  allPickups: {fileID: 0}
+  lvlComplete: LevelComplete_4
+  lvlNum: 4
+  allPickups: {fileID: 964459887}
 --- !u!4 &1471439438
 Transform:
   m_ObjectHideFlags: 0
@@ -12463,7 +12465,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999041721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.52858, y: 97.50909, z: -14.6}
+  m_LocalPosition: {x: -86.58127, y: 97.50909, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544766956}
