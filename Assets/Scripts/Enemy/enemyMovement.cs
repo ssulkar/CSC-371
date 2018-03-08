@@ -15,31 +15,31 @@ public class enemyMovement : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 
 		rb2d.freezeRotation = true;
-		min=transform.position.x;
-		max=transform.position.x+12;
+		min=transform.position.x-6.0f;
+		max=transform.position.x+6.0f;
 		facingRight = true;
 		enemyAnim = GetComponent<Animator> ();
     }
 	
 	// Update is called once per frame
-	void Update () {
-        transform.position =new Vector2(Mathf.PingPong(Time.time*2,max-min)+min, transform.position.y);
+	void FixedUpdate () {
+        transform.position =new Vector2(Mathf.PingPong(Time.time*5,max-min)+min, transform.position.y);
 
 		float currentSpeed = Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x);
-		enemyAnim.SetFloat ("speed", Mathf.Abs(currentSpeed));
+		enemyAnim.SetFloat ("speed", 2.0f);
 
 		HandleAnimations ();
     }
 
 	void HandleAnimations(){
 		//float moveX = Input.GetAxis( "Horizontal");
-		float moveX = rb2d.velocity.x;
+		float x = rb2d.position.x;
 		//ANIMATIONS
 
 		//PLAYER DIRECTION
-		if (moveX > 0.0f && facingRight == true) {
+		if (x >= max-0.5f && facingRight == true) {
 			FlipEnemy ();
-		} else if (moveX < 0.0f && facingRight == false) {
+		} else if (x <= min+0.5f && facingRight == false) {
 			FlipEnemy ();
 		}
 	}
