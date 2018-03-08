@@ -8,6 +8,7 @@ TagManager:
   - finish
   - Enemy
   - Money
+  - music
   layers:
   - Default
   - TransparentFX
