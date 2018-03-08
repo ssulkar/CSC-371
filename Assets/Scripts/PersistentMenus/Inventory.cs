@@ -10,8 +10,15 @@ public class Inventory : MonoBehaviour {
 
     public const int numItemSlots = 4;
 
+
+
+
     public void AddItem (Item itemToAdd)
     {
+		if (itemToAdd == null)
+			return;
+		if (itemToAdd.sprite == null)
+			return;
         for(int i = 0; i<items.Length; i++)
         {
             if (items[i] == null)

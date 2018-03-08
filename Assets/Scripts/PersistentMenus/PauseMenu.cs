@@ -13,10 +13,6 @@ public class PauseMenu : MonoBehaviour {
 	private bool invt = false;
 
 
-	void Start(){
-
-
-	}
 
 	void Update(){
 
@@ -66,22 +62,27 @@ public class PauseMenu : MonoBehaviour {
 
 
 	public void MainMenu(){
-
+		paused = false;
+		Time.timeScale = 1;
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
 	}
 
 	public void Quit(){
+		paused = false;
+		Time.timeScale = 1;
 		Application.Quit ();
 	}
 
 	public void Restart(){
-		
+		paused = false;
+		Time.timeScale = 1;
 		Scene scene = SceneManager.GetActiveScene();
 		SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
 	}
 
 	public void StartGame(){
-
+		paused = false;
+		Time.timeScale = 1;
 		SceneManager.LoadScene(1, LoadSceneMode.Single);
 	}
 }
