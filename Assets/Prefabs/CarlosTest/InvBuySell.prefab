@@ -133,7 +133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1306522987906912
 GameObject:
   m_ObjectHideFlags: 1
@@ -2601,38 +2601,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288519926178282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f7bf3b05c13304ebd67330d3bcf7c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 47297526fa9930342ae0295096e6c48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreNum: 1000
   ScoreText: {fileID: 114600055058809822}
   minusItem:
-  - {fileID: 114009018392613612}
-  - {fileID: 114197149532257012}
-  - {fileID: 114924794092313418}
-  - {fileID: 114938690549809660}
-  - {fileID: 114613632672274554}
-  - {fileID: 114958505086958698}
-  - {fileID: 114501834907968176}
-  - {fileID: 114698739815887828}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   addItem:
-  - {fileID: 114526002584432750}
-  - {fileID: 114156096277000524}
-  - {fileID: 114433635663072834}
-  - {fileID: 114659581732814804}
-  - {fileID: 114767978307292364}
-  - {fileID: 114510926386074976}
-  - {fileID: 114432365173918670}
-  - {fileID: 114093329793281610}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   imagesitem:
-  - {fileID: 114334449769583058}
-  - {fileID: 114877436251032040}
-  - {fileID: 114718736530043052}
-  - {fileID: 114914070822068322}
-  - {fileID: 114433838583907662}
-  - {fileID: 114039867564574116}
-  - {fileID: 114319559189102560}
-  - {fileID: 114011059638747854}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   trackItems: 0000000000000000000000000000000000000000000000000000000000000000
   buyMoney: 0000000000000000000000000000000000000000000000000000000000000000
   sellMoney: 0000000000000000000000000000000000000000000000000000000000000000
