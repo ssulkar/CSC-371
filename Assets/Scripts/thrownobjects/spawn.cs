@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour {
 	public GameObject[] thrownObject;
-	private int posRandRange = 1;
+	private int posRandRange = 5;
 	private float maxForcey = 15;
 	private float minForcey = 6;
 

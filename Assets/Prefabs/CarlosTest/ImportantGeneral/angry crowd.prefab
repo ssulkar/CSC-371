@@ -24,13 +24,42 @@ GameObject:
   - component: {fileID: 61598294892263868}
   - component: {fileID: 114341833013428132}
   - component: {fileID: 114321696239657432}
+  - component: {fileID: 114190802708671294}
   m_Layer: 0
-  m_Name: chachaDrake
+  m_Name: angry crowd
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1785700090875288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4425472116397794}
+  m_Layer: 0
+  m_Name: none
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425472116397794
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1785700090875288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4656889904926308}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4656889904926308
 Transform:
   m_ObjectHideFlags: 1
@@ -38,9 +67,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451926574250372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -109.1, y: 4.45, z: 0}
-  m_LocalScale: {x: 9.971443, y: 9.971448, z: 9.971448}
-  m_Children: []
+  m_LocalPosition: {x: -103.3, y: 1.56, z: 0}
+  m_LocalScale: {x: 2.6387627, y: 3.7272506, z: 2.6387641}
+  m_Children:
+  - {fileID: 4425472116397794}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,15 +110,29 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.83, y: 2.48}
-    newSize: {x: 1.83, y: 2.48}
+    oldSize: {x: 6, y: 3.5}
+    newSize: {x: 6, y: 3.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.83, y: 1.85}
+  m_Size: {x: 5.97, y: 3.48}
   m_EdgeRadius: 0
+--- !u!114 &114190802708671294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451926574250372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2bdca7c3b87784196e59e3aa4cceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseUI: {fileID: 1785700090875288}
+  InvUI: {fileID: 1785700090875288}
+  BuySellUI: {fileID: 1785700090875288}
 --- !u!114 &114321696239657432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,8 +160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   updatedSpeed: 0
-  pushForce: 3
-  max_force: 0
   max_speed: 0
 --- !u!212 &212170604625177308
 SpriteRenderer:
@@ -153,12 +195,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 88bc20f16861ed4408d9a30135b93799, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd1df1ffd93dda3489200aafe68ac10f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.83, y: 2.48}
+  m_Size: {x: 6, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

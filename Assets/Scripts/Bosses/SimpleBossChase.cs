@@ -10,9 +10,6 @@ public class SimpleBossChase : MonoBehaviour {
 	private GameObject player;
 	public float updatedSpeed;
 	private float dist;
-	public float pushForce;
-
-	public float max_force;
 	public float max_speed;
 
 
@@ -20,10 +17,8 @@ public class SimpleBossChase : MonoBehaviour {
 	void Start () {
 		moveBody = GetComponent<Rigidbody2D>();
 		player	= GameObject.FindGameObjectWithTag ("Player");
-		speed = 1;
+		speed = 2;
 		updatedSpeed = speed;
-		pushForce = 2;
-		max_force = 18;
 		max_speed = 9;
 	}
 	
@@ -45,13 +40,15 @@ public class SimpleBossChase : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "Player") {
-			Vector2 direction = new Vector2 (0,5);
+			//Vector2 direction = new Vector2 (0,5);
 			//Vector2 direction = new Vector2 (50,0);
-			other.gameObject.GetComponent<Rigidbody2D> ().AddForce(direction * pushForce, ForceMode2D.Impulse);
+			//other.gameObject.GetComponent<Rigidbody2D> ().AddForce(direction * pushForce, ForceMode2D.Impulse);
 
-			pushForce *= 1.5f;
-			if (pushForce > max_force)
-				pushForce = max_force;
+			//pushForce *= 1.5f;
+			//if (pushForce > max_force)
+			//	pushForce = max_force;
+
+			gameObject.GetComponent<PauseMenu>().Restart();
 		}
 
 
