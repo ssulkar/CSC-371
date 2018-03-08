@@ -10,6 +10,7 @@ public class ItemSpaceController : MonoBehaviour {
 
     private Inventory inventory;
 
+
     // Use this for initialization
     void Start () {
 

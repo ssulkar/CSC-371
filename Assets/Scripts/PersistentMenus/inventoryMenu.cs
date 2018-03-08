@@ -16,13 +16,6 @@ public class inventoryMenu : MonoBehaviour {
 
 
 
-	void Awake()
-	{
-		DontDestroyOnLoad (transform.gameObject);
-		if (FindObjectsOfType (GetType ()).Length > 1) {
-			Destroy (gameObject);
-		}
-	}
 
 	// Use this for initialization
 	void Start () {
@@ -51,18 +44,27 @@ public class inventoryMenu : MonoBehaviour {
 
 		for (int i = 0; i < 8; i++) {
 			if (trackItems [i] >= 0) {
-				imagesitem [i].enabled = true;
+				if (imagesitem[i] != null)
+					imagesitem [i].enabled = true;
 				if (trackItems [i] == 0) {
-					minusItem [i].gameObject.SetActive (false);
-					addItem [i].gameObject.SetActive (true);
+					if (minusItem[i] != null)
+						minusItem [i].gameObject.SetActive (false);
+					if (addItem[i] != null)
+						addItem [i].gameObject.SetActive (true);
 				} else {
-					minusItem [i].gameObject.SetActive (true);
-					addItem [i].gameObject.SetActive (false);
+					if (minusItem[i] != null)
+						minusItem [i].gameObject.SetActive (true);
+					if (addItem[i] != null)
+						addItem [i].gameObject.SetActive (false);
 				}
 			} else {
-				imagesitem [i].enabled = false;
-				minusItem [i].gameObject.SetActive (false);
-				addItem [i].gameObject.SetActive (false);
+				if (imagesitem[i] != null)
+					imagesitem [i].enabled = false;
+				if (minusItem[i] != null)
+					minusItem [i].gameObject.SetActive (false);
+				if (addItem[i] != null)
+					addItem [i].gameObject.SetActive (false);
+
 			}
 		}
 			
