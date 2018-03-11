@@ -16,6 +16,7 @@ public class PlayClick : MonoBehaviour {
 
 	void TaskOnClick()
 	{
+		//CHANGE THIS TO LOAD CUTSCENE USING IF ELSE
 		SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel"));
 	}
 }

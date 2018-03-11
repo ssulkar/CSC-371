@@ -14,7 +14,7 @@ public class DropdownControl : MonoBehaviour
 		
 		myDropdown.options.Clear();
 
-		for(int i = 0; i<=(PlayerPrefs.GetInt("currentLevel")); i++){
+		for(int i = 0; i<=(PlayerPrefs.GetInt("currentLevel")-1); i++){
 			myDropdown.options.Add(new Dropdown.OptionData() {text = list[i]} );
 		}
 
