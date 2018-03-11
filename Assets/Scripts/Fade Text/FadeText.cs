@@ -49,6 +49,16 @@ public class FadeText : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene("Cutscene4");
+        Scene scene = SceneManager.GetActiveScene();
+
+
+        if (string.Equals(scene.name, "AfterShow"))
+        {
+            SceneManager.LoadScene("Cutscene4");
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
