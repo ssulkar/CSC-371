@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class CutsceneDialogue2 : MonoBehaviour {
+public class CutsceneDialogue : MonoBehaviour {
 
     public string[] dialogueLines;
     public float delay; // seconds between characters
@@ -159,7 +159,29 @@ public class CutsceneDialogue2 : MonoBehaviour {
 
     void Complete()
     {
-        SceneManager.LoadScene("Level2");
+        Scene scene = SceneManager.GetActiveScene();
+
+
+        if (string.Equals(scene.name, "Cutscene1"))
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        else if (string.Equals(scene.name, "Cutscene2"))
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        else if(scene.name == "Cutscene3")
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        else if (scene.name == "Cutscene4")
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        else if (scene.name == "Cutscene5")
+        {
+            SceneManager.LoadScene("Level5");
+        }
     }
 
 }
