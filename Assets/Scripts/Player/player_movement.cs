@@ -148,7 +148,8 @@ public class player_movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money", 0) + 100);
             SetMoneyText();
-            Destroy(other);
+
+			Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("music"))
         {
@@ -160,10 +161,11 @@ public class player_movement : MonoBehaviour {
             TimeController.instance.AfterFinish();
             StartCoroutine(TestCoroutine());
         }
+		/*
         else if (other.gameObject.CompareTag("enemy"))
         {
             SceneManager.LoadScene("Menu(inbetween)");
-        }
+        }*/
 	}
 
 	void checkLevelUp()
