@@ -9,20 +9,35 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu(Main).unity
     guid: bb2c8355455274e298d2b7950cd036a3
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1.unity
-    guid: c8a8be20340a17543a9d94614e31aa9f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Levels/Level1Alt.unity
+    guid: 1f2180ee26722c64b99c18b392ccef87
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity
-    guid: c2eeaab82ab78415ba0d3ccc4e9ec8b1
+    guid: 6ead73bae7a1b9249b7c88d5d36a3a1e
   - enabled: 1
     path: Assets/Scenes/Levels/Level3.unity
     guid: eec51bc3cf7460542940cbf09d5d001a
   - enabled: 1
     path: Assets/Scenes/Levels/Level4.unity
-    guid: 62e48d421bf719d439a2ac6c6334ccff
+    guid: 517c382e3be7fc44e9e4b5209d78406a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level5.unity
+    guid: 3903e8ef118393743a0b1461995de67c
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelDrake.unity
+    guid: b283421415bf40d4f917c14c67e22e00
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu(inbetween).unity
     guid: aa616c59b573949d69b264bae5334bff
