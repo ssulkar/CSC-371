@@ -28,7 +28,8 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("LevelComplete_2", 0);
 		PlayerPrefs.SetInt ("LevelComplete_3", 0);
 		PlayerPrefs.SetInt ("LevelComplete_4", 0);
+		PlayerPrefs.SetInt ("LevelComplete_5", 0);
 
-		SceneManager.LoadScene ("Level1");
+		SceneManager.LoadScene (1);
 	}
 }

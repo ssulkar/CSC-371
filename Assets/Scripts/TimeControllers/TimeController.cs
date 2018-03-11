@@ -11,10 +11,12 @@ public class TimeController : MonoBehaviour {
 	public Text Platinum;						
 	public Text Clock;
 	public Text winText;
+	public Text level;
 
 	public Image gol;
 	public Image sil;
 	public Image plat;
+	public Image followerBar;
 
 	private float clockTime = 0;
 	public int silverTime;
@@ -80,6 +82,14 @@ public class TimeController : MonoBehaviour {
 
 
 	void Update () {
+
+		//updates level and exp bar
+		level.text = "Clout Level: " + PlayerPrefs.GetInt ("level");
+		if (PlayerPrefs.GetInt ("level") > 0) {
+			followerBar.fillAmount = (PlayerPrefs.GetInt ("followers") / ((float)(PlayerPrefs.GetInt ("level", 10) * 100)));
+		} else {
+			followerBar.fillAmount = (PlayerPrefs.GetInt ("followers") / 50.0f);
+		}
 
 		//update and display the clock time
 		clockTime = clockTime + Time.deltaTime;

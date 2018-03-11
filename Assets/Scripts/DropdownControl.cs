@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DropdownControl : MonoBehaviour
 {
-	public List<string> list = new List<string>() {"","Level 1","Level 2","Level 3","Level 3","Level 4","Level 5","Level 6","Level 7","Level 8","Level 9","Level 10"};
+	public List<string> list = new List<string>() {"","Level 1","Level 2","Level 3","Level 4","Level 5","Level 6","Level 7","Level 8","Level 9","Level 10"};
 	public Dropdown myDropdown;
 	public Text text;
 
@@ -28,10 +28,22 @@ public class DropdownControl : MonoBehaviour
 
 	private void myDropdownValueChangedHandler(Dropdown target) {
 		if (target.value == 1) {
-			SceneManager.LoadScene("Level1");
+			SceneManager.LoadScene(1);
 		}
 		if (target.value == 2) {
-			SceneManager.LoadScene("Level2");
+			SceneManager.LoadScene(2);
+		}
+		if (target.value == 3) {
+			SceneManager.LoadScene(3);
+		}
+		if (target.value == 4) {
+			SceneManager.LoadScene(4);
+		}		
+		if (target.value == 5) {
+			SceneManager.LoadScene(5);
+		}
+		if (target.value == 6) {
+			SceneManager.LoadScene(6);
 		}
 
 	}
