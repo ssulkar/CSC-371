@@ -158,12 +158,19 @@ public class TimeController : MonoBehaviour {
 
 
 		// allow the timers to come back
-		PlayerPrefs.SetInt(enableKey, 1);
+		StartCoroutine(TestCoroutine3());
 
 
 
 
 	}
 
+	IEnumerator TestCoroutine3()
+	{
+
+		yield return new WaitForSeconds(3);
+		PlayerPrefs.SetInt(enableKey, 1);
+
+	}
 
 }
