@@ -645,12 +645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'YOU:  What''s  Up  Lil  Pump!  Your  show  was  dope!  Gucci  Gang  is  my  favorite  song  right  now!'
-  - 'LIL  PUMP:  Thanks'
-  - 'YOU:  One  day  I  want  to  be  famous  like  you!'
-  - 'LIL  PUMP:  Yeah  right,  you  are  so  lame.  You  have  no  clout'
-  - 'YOU:  I  got  some  clout....'
-  - 'LIL  PUMP:  Let''s  see  what  you  got  then!'
+  - 'LIL  PUMP:  Not  bad....  maybe  you  should  try  to  become  a  rapper'
+  - 'YOU:  How  do  I  do  that?'
+  - 'LIL  PUMP:  Go  buy  a  microphone  and  start  recording  stuff  on  your  computer'
+  - 'YOU:  I''ll  stop  by  the  mall  on  the  way  home'
   delay: 0
   multiplier: 0
   DialogueInput: 32
