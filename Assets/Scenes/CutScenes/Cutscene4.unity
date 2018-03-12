@@ -651,6 +651,7 @@ MonoBehaviour:
   - 'LIL  PUMP:  Yeah  right,  you  are  so  lame.  You  have  no  clout'
   - 'YOU:  I  got  some  clout....'
   - 'LIL  PUMP:  Let''s  see  what  you  got  then!'
+  - Press  Space  To  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 32

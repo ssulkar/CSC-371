@@ -505,6 +505,7 @@ MonoBehaviour:
   - 'SON:  Mom  you  just  don''t  understand.  One  day  I  want  to  be  a  famous  rapper'
   - 'MOM:  Well  that  will  never  happen......'
   - Now  go  ahead  and  get  going,  you  don't  want  to  be  late  for  school
+  - Press  Space  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 32

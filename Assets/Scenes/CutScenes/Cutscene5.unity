@@ -649,6 +649,7 @@ MonoBehaviour:
   - 'YOU:  How  do  I  do  that?'
   - 'LIL  PUMP:  Go  buy  a  microphone  and  start  recording  stuff  on  your  computer'
   - 'YOU:  I''ll  stop  by  the  mall  on  the  way  home'
+  - Press  Space  To  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 32

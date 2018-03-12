@@ -647,6 +647,7 @@ MonoBehaviour:
   dialogueLines:
   - 'FRIEND:  Phew!  We  made  it  in  time!  We  just  have  to  get  to  where  the  show  is  at  without  getting  caught  by  any  of  the  security.'
   - 'YOU:  We''ve  made  it  this  far,  let''s  get  moving!'
+  - Press  Space  To  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 32

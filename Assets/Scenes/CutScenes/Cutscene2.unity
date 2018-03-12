@@ -504,6 +504,7 @@ MonoBehaviour:
   - Otherwise  we  could  just  walk  to  the  concert  right  now
   - 'FRIEND:  I  mean  we  could  always  ditch  school.....'
   - 'YOU:  We  got  to  go  now  then!  Hurry!'
+  - Press  Space  To  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 32
