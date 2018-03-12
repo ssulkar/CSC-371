@@ -17,7 +17,24 @@ public class PlayClick : MonoBehaviour {
 	void TaskOnClick()
 	{
 		//CHANGE THIS TO LOAD CUTSCENE USING IF ELSE
-		//int lvl = PlayerPrefs.GetInt("currentLevel")
-		SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel"));
+		int lvl = PlayerPrefs.GetInt("currentLevel");
+		if (lvl == 1) {
+			SceneManager.LoadScene ("Cutscene1");
+		}
+		else if(lvl == 2){
+			SceneManager.LoadScene ("Cutscene2");
+		}
+		else if(lvl == 3){
+			SceneManager.LoadScene ("Cutscene3");
+		}
+		else if(lvl == 4){
+			SceneManager.LoadScene ("Aftershow");
+		}
+		else if(lvl == 5){
+			SceneManager.LoadScene ("Cutscene6");
+		}
+		else if(lvl == 6){
+			SceneManager.LoadScene ("LevelDrake");
+		}
 	}
 }
