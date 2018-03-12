@@ -56,6 +56,6 @@ public class playerHealth : MonoBehaviour {
 		PlayerPrefs.SetInt ("level", cloutlvl);
 		PlayerPrefs.SetInt ("followers", fol);
 		PlayerPrefs.SetInt ("money", money);
-		SceneManager.LoadScene("Menu(inbetween)");
+		SceneManager.LoadScene("GameOver");
 	}
 }
