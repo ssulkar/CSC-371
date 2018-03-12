@@ -62,7 +62,7 @@ public class FadeText : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("GameOver");
+			SceneManager.LoadScene("Menu(inbetween)");
         }
     }
 }
