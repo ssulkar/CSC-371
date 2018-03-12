@@ -19,10 +19,10 @@ public class AudioManager : MonoBehaviour {
     public void changeMusic(AudioClip music2)
     {
         //if same music clip do not restart
-        if (music1.clip.name == music2.name)
+        /*if (music1.clip.name == music2.name)
         {
             return;
-        }
+        } */
 
         music1.Stop();
         music1.clip = music2;
