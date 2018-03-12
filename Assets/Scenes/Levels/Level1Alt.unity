@@ -1609,7 +1609,7 @@ GameObject:
   - component: {fileID: 558438619}
   - component: {fileID: 558438618}
   m_Layer: 5
-  m_Name: Content
+  m_Name: Content2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11020,7 +11020,7 @@ GameObject:
   - component: {fileID: 1585256506}
   - component: {fileID: 1585256505}
   m_Layer: 5
-  m_Name: Mask
+  m_Name: Mask2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

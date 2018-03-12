@@ -30,6 +30,6 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("LevelComplete_4", 0);
 		PlayerPrefs.SetInt ("LevelComplete_5", 0);
 
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene ("Cutscene1");
 	}
 }
