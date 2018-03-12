@@ -176,9 +176,17 @@ public class CutsceneDialogue : MonoBehaviour {
         }
         else if (scene.name == "Cutscene4")
         {
-            SceneManager.LoadScene("Level4");
+            SceneManager.LoadScene("Cutscene5");
         }
         else if (scene.name == "Cutscene5")
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        else if (scene.name == "Cutscene6")
+        {
+            SceneManager.LoadScene("NextDay");
+        }
+        else if (scene.name == "Cutscene7")
         {
             SceneManager.LoadScene("Level5");
         }

@@ -56,6 +56,10 @@ public class FadeText : MonoBehaviour
         {
             SceneManager.LoadScene("Cutscene4");
         }
+        else if (string.Equals(scene.name, "NextDay"))
+        {
+            SceneManager.LoadScene("Cutscene7");
+        }
         else
         {
             SceneManager.LoadScene("GameOver");
