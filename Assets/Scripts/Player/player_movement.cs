@@ -189,10 +189,6 @@ public class player_movement : MonoBehaviour {
 	{
 		countText.text = "Clout: " + PlayerPrefs.GetInt("followers").ToString();
 
-		if(count == 1)
-		{
-			cloutText.text = "Clout Acquired";
-		}
 	}
 
 
