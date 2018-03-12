@@ -1540,7 +1540,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881327728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80.49127, y: 28.409084, z: -10}
+  m_LocalPosition: {x: -80.439064, y: 28.409084, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3254,9 +3254,11 @@ MonoBehaviour:
   Platinum: {fileID: 297583380}
   Clock: {fileID: 1376452492}
   winText: {fileID: 948671034}
+  level: {fileID: 0}
   gol: {fileID: 458549168}
   sil: {fileID: 2046631215}
   plat: {fileID: 1442306204}
+  followerBar: {fileID: 0}
   silverTime: 50
   goldTime: 40
   platinumTime: 30
@@ -3302,7 +3304,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7285487d3e430d347a4b02bc337c9a66, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 05dd39a846f2d0b44b0efd4594483b0e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3759,7 +3761,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999041721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80.49127, y: 28.409084, z: -10}
+  m_LocalPosition: {x: -80.439064, y: 28.409084, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544766956}
