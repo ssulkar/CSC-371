@@ -22,8 +22,8 @@ public class CutsceneDialogue : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        delay = 0.15f;
-        multiplier = 0.5f;
+        delay = 0.1f;
+        multiplier = 0.1f;
         stringShown = false;
         dialoguePlaying = false;
         endOfDialogue = false;
@@ -164,7 +164,7 @@ public class CutsceneDialogue : MonoBehaviour {
 
         if (string.Equals(scene.name, "Cutscene1"))
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level1Alt");
         }
         else if (string.Equals(scene.name, "Cutscene2"))
         {
