@@ -786,7 +786,7 @@ Prefab:
     - target: {fileID: 224548104059261164, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224517724095317990, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
@@ -806,7 +806,7 @@ Prefab:
     - target: {fileID: 224517724095317990, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 224838951769205128, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
@@ -826,7 +826,7 @@ Prefab:
     - target: {fileID: 224838951769205128, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 224256717642240286, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
@@ -846,11 +846,11 @@ Prefab:
     - target: {fileID: 224256717642240286, guid: aceeb1c94d681964b9ce22acbfed0827,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -425
       objectReference: {fileID: 0}
     - target: {fileID: 1217464904429556, guid: aceeb1c94d681964b9ce22acbfed0827, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aceeb1c94d681964b9ce22acbfed0827, type: 2}
@@ -2428,12 +2428,16 @@ MonoBehaviour:
   Platinum: {fileID: 1475343454}
   Clock: {fileID: 1587179969}
   winText: {fileID: 1996432167}
+  level: {fileID: 0}
   gol: {fileID: 1423812548}
   sil: {fileID: 1176687640}
   plat: {fileID: 1214582535}
+  followerBar: {fileID: 0}
   silverTime: 50
   goldTime: 40
   platinumTime: 30
+  lvlComplete: 
+  lvlNum: 0
   allPickups: {fileID: 0}
 --- !u!4 &1698679104
 Transform:

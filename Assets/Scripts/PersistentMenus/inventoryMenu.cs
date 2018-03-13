@@ -29,10 +29,15 @@ public class inventoryMenu : MonoBehaviour {
 		buyMoney [6] = 700;
 		buyMoney [7] = 900;
 
+		ScoreNum = PlayerPrefs.GetInt ("money");
+
 
 		for (int i = 0; i < 8; i++) {
-			trackItems [i] = i-3;
-			sellMoney [i] = buyMoney[i] /2 ;
+			if (i < 3)
+				trackItems [i] = 0;
+			else
+				trackItems [i] = -1;
+			sellMoney [i] = buyMoney[i] ;
 		}
 			
 	}
@@ -72,6 +77,11 @@ public class inventoryMenu : MonoBehaviour {
 
 	}
 
+	private void updateMoney()
+	{
+		PlayerPrefs.SetInt ("money", ScoreNum);
+	}
+
 
 
 	public void press_button1minus()
@@ -81,6 +91,7 @@ public class inventoryMenu : MonoBehaviour {
 
 		ScoreNum += sellMoney [button];
 		trackItems [button] = type;
+		updateMoney ();
 	}
 
 	public void press_button1plus()
@@ -93,6 +104,7 @@ public class inventoryMenu : MonoBehaviour {
 
 		ScoreNum -= buyMoney [button];
 		trackItems [button] = type;
+		updateMoney ();
 	}
 
 	public void press_button2minus()
@@ -102,6 +114,7 @@ public class inventoryMenu : MonoBehaviour {
 
 		ScoreNum += sellMoney [button];
 		trackItems [button] = type;
+		updateMoney ();
 	}
 
 	public void press_button2plus()
@@ -114,6 +127,7 @@ public class inventoryMenu : MonoBehaviour {
 		
 		ScoreNum -= buyMoney [button];
 		trackItems [button] = type;
+		updateMoney ();
 	}
 
 	public void press_button3minus()
@@ -123,6 +137,7 @@ public class inventoryMenu : MonoBehaviour {
 
 		ScoreNum += sellMoney [button];
 		trackItems [button] = type;
+		updateMoney ();
 	}
 
 	public void press_button3plus()
@@ -135,6 +150,7 @@ public class inventoryMenu : MonoBehaviour {
 
 		ScoreNum -= buyMoney [button];
 		trackItems [button] = type;
+		updateMoney ();
 	}
 
 	public void press_button4minus()
