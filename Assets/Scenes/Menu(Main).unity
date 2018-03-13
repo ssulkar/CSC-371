@@ -1417,7 +1417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Game Title
+  m_Text: The Comeup
 --- !u!222 &1435708026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1993,7 +1993,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f0ddd21bacd432b8531bd09f5b6c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  list:
+  - 
+  - Level 1
+  - Level 2
+  - Level 3
+  - Level 4
+  - Level 5
+  - Level 6
+  - Level 7
+  - Level 8
+  - Level 9
+  - Level 10
   myDropdown: {fileID: 1854832384}
+  text: {fileID: 0}
 --- !u!1 &1889295618
 GameObject:
   m_ObjectHideFlags: 0
