@@ -1,17 +1,22 @@
 fileFormatVersion: 2
-guid: e4c5592e322a53749bc15036ce822e2a
-timeCreated: 1520125900
+guid: 98235b9a5a983cf46b8036e2673eb31b
+timeCreated: 1520986586
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Mom_0
-    21300002: Mom_1
-    21300004: Mom_2
-    21300006: Mom_3
-    21300008: Mom_4
-    21300010: Mom_5
-    21300012: Mom_6
-    21300014: Mom_7
+    21300000: Yachty clone_0
+    21300002: Yachty clone_1
+    21300004: Yachty clone_2
+    21300006: Yachty clone_3
+    21300008: Yachty clone_4
+    21300010: Yachty clone_5
+    21300012: Yachty clone_6
+    21300014: Yachty clone_7
+    21300016: Yachty clone_8
+    21300018: Yachty clone_9
+    21300020: Yachty clone_10
+    21300022: Yachty clone_11
+    21300024: Yachty clone_12
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +93,63 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mom_0
+      name: Yachty clone_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Yachty clone_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Yachty clone_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Yachty clone_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Yachty clone_4
       rect:
         serializedVersion: 2
         x: 0
@@ -102,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_1
+      name: Yachty clone_5
       rect:
         serializedVersion: 2
         x: 32
@@ -116,7 +177,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_2
+      name: Yachty clone_6
       rect:
         serializedVersion: 2
         x: 64
@@ -130,7 +191,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_3
+      name: Yachty clone_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Yachty clone_8
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_4
+      name: Yachty clone_9
       rect:
         serializedVersion: 2
         x: 32
@@ -158,7 +233,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_5
+      name: Yachty clone_10
       rect:
         serializedVersion: 2
         x: 64
@@ -172,11 +247,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_6
+      name: Yachty clone_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 96
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -186,10 +261,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Mom_7
+      name: Yachty clone_12
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 0
         width: 32
         height: 32

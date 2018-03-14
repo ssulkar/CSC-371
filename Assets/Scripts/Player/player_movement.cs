@@ -199,8 +199,8 @@ public class player_movement : MonoBehaviour {
 
 	IEnumerator TestCoroutine()
 	{
-
-		yield return new WaitForSeconds(3);
+        playerSpeed = 0;
+        yield return new WaitForSeconds(12);
 		SceneManager.LoadScene("Menu(inbetween)");
 
 	}

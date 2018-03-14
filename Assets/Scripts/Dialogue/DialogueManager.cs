@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject dBox;
     public Text dText;
 
-    public bool dialogueActive;
+    public bool dialogueActive = false;
 
     public string[] dialogLines;
     public int currentLine;
@@ -16,16 +16,16 @@ public class DialogueManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        dBox.SetActive(false);
         currentLine = 0;
-        dialogLines = new string[3];
-        fillDialogue();
+        //fillDialogue();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        // every time player presses space, progresses onto next string
-        if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
+        // every time player presses enter, progresses onto next string
+        if (dialogueActive && Input.GetKeyDown(KeyCode.Return))
         {
             currentLine++;
         }
@@ -50,12 +50,5 @@ public class DialogueManager : MonoBehaviour {
         dialogueActive = true;
         dBox.SetActive(true);
 
-    }
-
-    public void fillDialogue()
-    {
-        dialogLines[0] = "STRAIGHT UP";
-        dialogLines[1] = "LA FLAME!";
-        dialogLines[2] = "MOM: STOP MAKING LISTENING TO THAT HIPPITY HOP GARBAGE!";
     }
 }

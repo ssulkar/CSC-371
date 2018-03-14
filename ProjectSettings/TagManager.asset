@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Money
   - music
+  - Ground
+  - Drake
   layers:
   - Default
   - TransparentFX

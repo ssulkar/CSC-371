@@ -22,6 +22,7 @@ public class drakeScript : MonoBehaviour {
 		
 	}
 
+	//followed this tutorial https://www.youtube.com/watch?v=T-rCJrU1Cqs
 	IEnumerator bossPattern(){
 		while (true) {
 			//move
