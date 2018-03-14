@@ -506,7 +506,7 @@ MonoBehaviour:
   - Press  Space  To  Begin
   delay: 0
   multiplier: 0
-  DialogueInput: 32
+  DialogueInput: 13
   instruction: {fileID: 1410981034}
 --- !u!1 &1003742822
 GameObject:
