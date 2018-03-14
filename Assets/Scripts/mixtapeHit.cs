@@ -34,6 +34,10 @@ public class mixtapeHit : MonoBehaviour {
 				enemyHealth health = other.gameObject.GetComponent<enemyHealth> ();
 				health.addDamage (damage);
 			}
+			else if (other.tag == "Drake") {
+				drakeHealth health = other.gameObject.GetComponent<drakeHealth> ();
+				health.addDamage (damage);
+			}
 		}
 	}
 
