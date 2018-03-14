@@ -104,7 +104,8 @@ public class player_movement : MonoBehaviour {
     }*/
 
 	void Jump(){
-		if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
+		//if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
+		if(isGrounded == true && Input.GetButtonDown("Jump")){
 			isGrounded = false;
 			//GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
 			GetComponent<Rigidbody2D>().AddForce(transform.up * playerJumpPower, ForceMode2D.Impulse);

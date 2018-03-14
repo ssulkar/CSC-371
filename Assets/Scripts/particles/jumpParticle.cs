@@ -6,11 +6,14 @@ public class jumpParticle : MonoBehaviour {
 
 	public string inputButton;
 	public ParticleSystem particleEffect;
+	public Animator anim;
 
 
 	// Use this for initialization
 	void Start () {
-		particleEffect.Stop ();
+		if (particleEffect != null)
+			particleEffect.Stop ();
+		
 	}
 	
 	// Update is called once per frame
@@ -18,7 +21,9 @@ public class jumpParticle : MonoBehaviour {
 
 		if (Input.GetButtonDown (inputButton)) {
 
-			particleEffect.Play ();
+			if (particleEffect != null)
+				particleEffect.Play ();
+			
 
 		}
 		
