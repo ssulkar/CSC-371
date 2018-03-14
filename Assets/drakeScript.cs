@@ -8,20 +8,30 @@ public class drakeScript : MonoBehaviour {
 	public float speed;
 	public Transform[] eyes;
 	public GameObject tear;
+	public GameObject ocean;
 
 	private GameObject player;
 	private Vector3 playerPosition;
+	private enemyHealth hp;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		StartCoroutine ("bossPattern");
+		hp = GetComponent<enemyHealth>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (hp.getCurrentHealth() <= 0) {
+			CryOcean ();
+		}
 	}
 
+	void CryOcean(){
+		Instantiate (ocean, transform.position, transform.rotation);
+	}
+
+	//followed this tutorial https://www.youtube.com/watch?v=T-rCJrU1Cqs
 	IEnumerator bossPattern(){
 		while (true) {
 			//move

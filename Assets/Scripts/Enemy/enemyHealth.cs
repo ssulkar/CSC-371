@@ -31,4 +31,8 @@ public class enemyHealth : MonoBehaviour {
 		Instantiate (money, transform.position, transform.rotation);
 		Destroy (gameObject);
 	}
+
+	public float getCurrentHealth(){
+		return currentHealth;
+	}
 }
