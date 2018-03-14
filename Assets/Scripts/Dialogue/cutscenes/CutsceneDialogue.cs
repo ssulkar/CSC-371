@@ -10,7 +10,7 @@ public class CutsceneDialogue : MonoBehaviour {
     public float delay; // seconds between characters
     public float multiplier; // increase speed when key held
 
-    public KeyCode DialogueInput = KeyCode.Space;
+    public KeyCode DialogueInput = KeyCode.Return;
 
     private bool stringShown;
     private bool dialoguePlaying;
@@ -36,7 +36,7 @@ public class CutsceneDialogue : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Return))
         {
             if (!dialoguePlaying)
             {

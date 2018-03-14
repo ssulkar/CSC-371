@@ -480,7 +480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: PRESS  ENTER
 --- !u!222 &985759198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -500,15 +500,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - 'MOM:  Turn  down  that  hippity  hop  garbage!'
-  - 'SON:  But  Mom!  Travis  Scott  just  dropped  a  new  track!  Everyone  will  be  talking  about  it  at  school!'
+  - 'YOU:  But  Mom!  Travis  Scott  just  dropped  a  new  track!  Everyone  will  be  talking  about  it  at  school!'
   - 'MOM:  That  is  such  a  waste  of  your  time  son,  focus  on  your  grades.'
-  - 'SON:  Mom  you  just  don''t  understand.  One  day  I  want  to  be  a  famous  rapper'
+  - 'YOU:  Mom  you  just  don''t  understand.  One  day  I  want  to  be  a  famous  rapper'
   - 'MOM:  Well  that  will  never  happen......'
   - Now  go  ahead  and  get  going,  you  don't  want  to  be  late  for  school
-  - Press  Space  to  Begin
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
-  DialogueInput: 32
+  DialogueInput: 13
   instruction: {fileID: 1410981034}
 --- !u!1 &1003742822
 GameObject:
@@ -653,8 +653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -34.328156}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 13.79, y: -34.328156}
+  m_SizeDelta: {x: 187.57, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410981036
 MonoBehaviour:
@@ -688,7 +688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESS SPACE
+  m_Text: "PRESS  ENTER \n(HOLD  ENTER  TO  SPEED  UP)"
 --- !u!222 &1410981037
 CanvasRenderer:
   m_ObjectHideFlags: 0
