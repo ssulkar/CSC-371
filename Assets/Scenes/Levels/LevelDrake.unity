@@ -1821,7 +1821,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881327728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.02907, y: 13.609085, z: -10}
+  m_LocalPosition: {x: -84.07949, y: 13.609085, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1961,7 +1961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &898450097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26702,8 +26702,8 @@ MonoBehaviour:
   silverTime: 50
   goldTime: 40
   platinumTime: 30
-  lvlComplete: LevelComplete_1
-  lvlNum: 1
+  lvlComplete: LevelComplete_6
+  lvlNum: 6
   allPickups: {fileID: 964459887}
 --- !u!4 &1471439438
 Transform:
@@ -27582,7 +27582,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999041721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.02907, y: 13.609085, z: -10}
+  m_LocalPosition: {x: -84.07949, y: 13.609085, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544766956}
