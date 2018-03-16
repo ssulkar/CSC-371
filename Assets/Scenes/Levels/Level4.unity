@@ -13294,7 +13294,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881327728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.52907, y: 27.70908, z: -14.6}
+  m_LocalPosition: {x: -86.57949, y: 27.70908, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14533,8 +14533,9 @@ MonoBehaviour:
   silverTime: 55
   goldTime: 45
   platinumTime: 35
-  lvlComplete: LevelComplete_4
-  lvlNum: 4
+  lvlComplete: LevelComplete_3
+  lvlAttempted: lvlAttempted_3
+  lvlNum: 3
   allPickups: {fileID: 964459887}
 --- !u!4 &1471439438
 Transform:
@@ -15779,7 +15780,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999041721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.52907, y: 27.70908, z: -14.6}
+  m_LocalPosition: {x: -86.57949, y: 27.70908, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544766956}

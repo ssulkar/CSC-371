@@ -24,6 +24,7 @@ public class TimeController : MonoBehaviour {
 	public int platinumTime;
 
 	public string lvlComplete;
+	public string lvlAttempted;
 	public int lvlNum;
 
 	public GameObject allPickups;
@@ -47,6 +48,7 @@ public class TimeController : MonoBehaviour {
 
 
 	void Start () {
+		PlayerPrefs.SetInt (lvlAttempted, 1);
 		enableKey = lvlComplete;
 
 		//gets all the pickups to allow them to be disabled when timer is active
