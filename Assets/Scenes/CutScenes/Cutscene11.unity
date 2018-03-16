@@ -243,7 +243,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 460070300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.45, y: -2.8, z: -4.51}
+  m_LocalPosition: {x: 1.66, y: -2.07, z: -4.51}
   m_LocalScale: {x: 10.55113, y: 9.427685, z: 0.57906973}
   m_Children: []
   m_Father: {fileID: 0}
@@ -389,7 +389,7 @@ SpriteRenderer:
   m_SortingLayerID: 1673568085
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a9f6ff98cae9594894510bd80c0879c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66d5e7c06355be34b97475312a384efe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -406,8 +406,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771287488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18, y: 0.01, z: 0}
-  m_LocalScale: {x: 2.6348283, y: 2.368384, z: 2.368384}
+  m_LocalPosition: {x: -0.414, y: 0.01, z: 0}
+  m_LocalScale: {x: 3.8437371, y: 2.9027216, z: 2.9027216}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -499,9 +499,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'YOU:  WOW!  My  song  now  has  150  million  plays!!!  I  am  invincible!'
-  - I  got  my  first  headliner  tonight  too!
-  - Better  head  on  over....
+  - 'YOU:  Oh  no!  I  forgot  the  words  to  my  song!'
+  - This  crowd  is  getting  nasty,  I  better  get  out  of  here!!
   - Press  Enter  To  Begin
   delay: 0
   multiplier: 0

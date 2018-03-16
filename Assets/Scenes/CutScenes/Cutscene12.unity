@@ -499,10 +499,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'YOU:  WOW!  My  song  now  has  150  million  plays!!!  I  am  invincible!'
-  - I  got  my  first  headliner  tonight  too!
-  - Better  head  on  over....
-  - Press  Enter  To  Begin
+  - 'YOU:  Maybe  I  should  give  up  on  this  rap  career'
+  - An  email  from  DJ  KHalid?!
+  - I  better  head  to  his  studio  before  he  changes  his  mind....
+  - Press  Enter  to  Continue
   delay: 0
   multiplier: 0
   DialogueInput: 13
