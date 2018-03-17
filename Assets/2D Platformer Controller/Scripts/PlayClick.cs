@@ -19,19 +19,39 @@ public class PlayClick : MonoBehaviour {
 		int lvl = PlayerPrefs.GetInt("currentLevel");
 
 		if (lvl == 1) {
-			SceneManager.LoadScene ("Cutscene1");
+			if (PlayerPrefs.GetInt ("lvlAttempted_1") == 0) {	
+				SceneManager.LoadScene ("Cutscene1");
+			} else {
+				SceneManager.LoadScene (1);
+			}
 		}
 		else if(lvl == 2){
-			SceneManager.LoadScene ("Cutscene2");
+			if (PlayerPrefs.GetInt ("lvlAttempted_2") == 0) {	
+				SceneManager.LoadScene ("Cutscene2");
+			} else {
+				SceneManager.LoadScene (2);
+			}
 		}
 		else if(lvl == 3){
-			SceneManager.LoadScene ("Cutscene3");
+			if (PlayerPrefs.GetInt ("lvlAttempted_3") == 0) {	
+				SceneManager.LoadScene ("Cutscene3");
+			} else {
+				SceneManager.LoadScene (3);
+			}
 		}
 		else if(lvl == 4){
-			SceneManager.LoadScene ("Aftershow");
+			if (PlayerPrefs.GetInt ("lvlAttempted_4") == 0) {	
+				SceneManager.LoadScene ("Cutscene4");
+			} else {
+				SceneManager.LoadScene (4);
+			}
 		}
 		else if(lvl == 5){
-			SceneManager.LoadScene ("Cutscene6");
+			if (PlayerPrefs.GetInt ("lvlAttempted_5") == 0) {	
+				SceneManager.LoadScene ("Cutscene5");
+			} else {
+				SceneManager.LoadScene (5);
+			}
 		}
 		else if(lvl == 6){
 			SceneManager.LoadScene ("LevelDrake");
