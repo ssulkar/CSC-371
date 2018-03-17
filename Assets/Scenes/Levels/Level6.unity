@@ -12051,6 +12051,7 @@ MonoBehaviour:
   goldTime: 50
   platinumTime: 43
   lvlComplete: LevelComplete_1
+  lvlAttempted: 
   lvlNum: 1
   allPickups: {fileID: 964459887}
 --- !u!4 &1471439438
@@ -12686,7 +12687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1834747103
 MonoBehaviour:
   m_ObjectHideFlags: 0
