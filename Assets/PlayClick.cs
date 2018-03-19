@@ -17,6 +17,7 @@ public class PlayClick : MonoBehaviour {
 	void TaskOnClick()
 	{
 		int lvl = PlayerPrefs.GetInt("currentLevel");
+		int playerlvl = PlayerPrefs.GetInt ("level");
 
 		if (lvl == 1) {
 			if (PlayerPrefs.GetInt ("lvlAttempted_1") == 0) {	
@@ -33,10 +34,14 @@ public class PlayClick : MonoBehaviour {
 			}
 		}
 		else if(lvl == 3){
-			if (PlayerPrefs.GetInt ("lvlAttempted_3") == 0) {	
-				SceneManager.LoadScene ("Cutscene3");
+			if (playerlvl < 2) {
+				SceneManager.LoadScene ("Level Locked");
 			} else {
-				SceneManager.LoadScene (3);
+				if (PlayerPrefs.GetInt ("lvlAttempted_3") == 0) {	
+					SceneManager.LoadScene ("Cutscene3");
+				} else {
+					SceneManager.LoadScene (3);
+				}
 			}
 		}
 		else if(lvl == 4){

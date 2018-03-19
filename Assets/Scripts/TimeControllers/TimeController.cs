@@ -76,6 +76,13 @@ public class TimeController : MonoBehaviour {
 		winText.enabled = false;
 		done = false;
 
+		//Negative Feedback loop to reduce allotted time if player is consistently fast
+		if (PlayerPrefs.GetInt ("streak") >= 2) {
+			silverTime = (int)(silverTime * .9);
+			goldTime = (int)(goldTime * .9);
+			platinumTime = (int)(platinumTime * .9);
+		}
+
 		//set the amount of time alloted
 		Silver.text = "Silver: " + silverTime.ToString () + " seconds";
 		Gold.text = "Gold: " + goldTime.ToString () + " seconds";
@@ -128,24 +135,33 @@ public class TimeController : MonoBehaviour {
 			if (clockTime <= platinumTime) {
 				//score = score + 1000;
 				followersGained = lvlNum * 50;
+				if (PlayerPrefs.GetInt ("streak") >= 2) {
+					followersGained = followersGained * 2;
+				}
 				winText.text = "Platinum Time Acheived, you gained " + followersGained.ToString () + " followers";
 				winText.enabled = true;
 				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
+				PlayerPrefs.SetInt ("streak", (PlayerPrefs.GetInt ("streak") + 1));
 			} else if (clockTime <= goldTime) {
 				//score = score + 500;
 				followersGained = lvlNum * 25;
 				winText.text = "Gold Time Acheived, you gained " + followersGained.ToString () + " followers";
 				winText.enabled = true;
 				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
+				PlayerPrefs.SetInt ("streak", 0);
 			} else if (clockTime <= silverTime) {
 				//score = score + 100;
 				followersGained = lvlNum * 10;
 				winText.text = "Silver Time Acheived, you gained " + followersGained.ToString () + " followers";
 				winText.enabled = true;
 				PlayerPrefs.SetInt ("followers", PlayerPrefs.GetInt ("followers") + followersGained);
+				PlayerPrefs.SetInt ("streak", 0);
 			} else {
 				winText.text = "You're gona have to be faster than that";
+				PlayerPrefs.SetInt ("streak", 0);
 			}
+			player_movement.instance.checkLevelUp ();
+
 			//to ensure we dont pass any more time goals
 			clockTime = -10000;
 			done = true;
