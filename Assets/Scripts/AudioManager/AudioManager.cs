@@ -7,8 +7,9 @@ public class AudioManager : MonoBehaviour {
     public AudioSource music1;
     
     // Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame
