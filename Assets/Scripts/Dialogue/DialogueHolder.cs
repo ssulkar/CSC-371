@@ -59,7 +59,7 @@ public class DialogueHolder: MonoBehaviour {
     {
         if(sign == 1)
         {
-            dialogue[0] = "Use  WASD  to  move  and  jump";
+            dialogue[0] = "Use  WASD  to  move  and  jump \nHold  W  key  to  jump  higher!";
         }
         else if(sign == 2)
         {

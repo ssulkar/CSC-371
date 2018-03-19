@@ -172,9 +172,9 @@ public class CutsceneDialogue : MonoBehaviour {
         }
         else if(scene.name == "Cutscene3")
         {
-            SceneManager.LoadScene("Level3");
+            SceneManager.LoadScene("AfterShow");
         }
-        else if (scene.name == "Cutscene4")
+        else if (scene.name == "Cutscene4") // lil pump boss battle
         {
             SceneManager.LoadScene("Cutscene5");
         }
@@ -189,6 +189,38 @@ public class CutsceneDialogue : MonoBehaviour {
         else if (scene.name == "Cutscene7")
         {
             SceneManager.LoadScene("Level5");
+        }
+        else if (scene.name == "Cutscene8") // lil yachty boss battle
+        {
+            SceneManager.LoadScene("Level5");
+        }
+        else if (scene.name == "Cutscene9")
+        {
+            SceneManager.LoadScene("Cutscene10");
+        }
+        else if (scene.name == "Cutscene10")
+        {
+            SceneManager.LoadScene("Cutscene11");
+        }
+        else if (scene.name == "Cutscene11")
+        {
+            SceneManager.LoadScene("Level6");
+        }
+        else if (scene.name == "Cutscene12")
+        {
+            SceneManager.LoadScene("Level7");
+        }
+        else if (scene.name == "Cutscene13")
+        {
+            SceneManager.LoadScene("NextMorning");
+        }
+        else if (scene.name == "Cutscene14")
+        {
+            SceneManager.LoadScene("Transition");
+        }
+        else if (scene.name == "Drakecutscene")
+        {
+            SceneManager.LoadScene("LevelDrake");
         }
     }
 

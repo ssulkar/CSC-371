@@ -109,8 +109,17 @@ public class player_movement : MonoBehaviour {
 		} else if (moveX > 0.0f && facingRight == false) {
 			FlipPlayer ();
 		}
+
+		// extra movement speed
+		float extraSpeed = PlayerPrefs.GetInt ("item1");
+		if (extraSpeed == 0)
+			extraSpeed = 1.0f;
+		else
+			extraSpeed = 1.5f;
+
+
 		//PHYSICS
-		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed * extraSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 	}
 	/*
     void Jump()
@@ -121,10 +130,18 @@ public class player_movement : MonoBehaviour {
 
 	void Jump(){
 		//if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
+
+		//added extra jump for item effect
+		float extraJump = PlayerPrefs.GetInt ("item3");
+		if (extraJump == 0)
+			extraJump = 1.0f;
+		else
+			extraJump = 1.5f;
+
 		if(isGrounded == true && Input.GetButtonDown("Jump")){
 			isGrounded = false;
 			//GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
-			GetComponent<Rigidbody2D>().AddForce(transform.up * playerJumpPower, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddForce(transform.up * playerJumpPower * extraJump, ForceMode2D.Impulse);
 			playerAnim.SetBool ("isGrounded", false);
 		}
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, groundLayer);

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour {
 	public GameObject[] thrownObject;
-	private int posRandRange = 5;
-	private float maxForcey = 15;
-	private float minForcey = 6;
+	private int posRandRange = 10;
+	private float maxForcey = 18;
+	private float minForcey = 9;
 
-	private float maxForcex = 20;
-	private float minForcex = 8;
+	private float maxForcex = 23;
+	private float minForcex = 11;
 
 
-	private float period = 1.0f; // 1 seconds
+	private float period = 2.0f; // 2 seconds
 	private float nextActionTime = 0.0f;
 	private Transform randTrans;
 	private GameObject curr;
@@ -24,7 +24,7 @@ public class spawn : MonoBehaviour {
 	}
 
 	void Update(){
-		if (Time.time >= nextActionTime) {
+		if (Time.time >= nextActionTime && transform.position.x < 178) {
 
 			nextActionTime = Time.time + period;
 

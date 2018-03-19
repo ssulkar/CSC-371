@@ -17,6 +17,8 @@ public class playerHealth : MonoBehaviour {
 	private int fol;
 	private int money;
 
+	private int freeHit;
+
 	void Start (){
 		currentHealth = playerMaxHealth;
 		playerMov = GetComponent<player_movement> ();
@@ -24,6 +26,9 @@ public class playerHealth : MonoBehaviour {
 		cloutlvl = PlayerPrefs.GetInt ("level");
 		fol = PlayerPrefs.GetInt ("followers");
 		money = PlayerPrefs.GetInt ("money");
+
+		// tracks item free hit
+		freeHit =  PlayerPrefs.GetInt ("item2");
 	}
 
 	void Update() {
@@ -33,7 +38,11 @@ public class playerHealth : MonoBehaviour {
 	}
 
 	public void addDamage(float damage){
-		currentHealth -= damage;
+
+		if (freeHit == 0)
+			currentHealth -= damage;
+		else
+			freeHit = 0;
 
 		//controls how filled the health bar is
 		healthBar.fillAmount = (currentHealth / playerMaxHealth);

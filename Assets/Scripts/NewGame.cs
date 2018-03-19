@@ -22,6 +22,10 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("followers", 0);
 		PlayerPrefs.SetInt ("level", 0);
 
+		PlayerPrefs.SetInt ("item1", 0);
+		PlayerPrefs.SetInt ("item2", 0);
+		PlayerPrefs.SetInt ("item3", 0);
+
 		PlayerPrefs.SetInt ("currentLevel", 1);
 
 		PlayerPrefs.SetInt ("LevelComplete_1", 0);

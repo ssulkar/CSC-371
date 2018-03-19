@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - 'YOU:  WHAT?!'
-  - My  song  is  trending  all  over  social  media!!
+  - My  new  song  is  trending  all  over  social  media!!
   - Press  Enter  to  Continue
   delay: 0
   multiplier: 0
