@@ -21,9 +21,9 @@ public class inventoryMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		buyMoney [0] = 200;
-		buyMoney [1] = 400;
-		buyMoney [2] = 600;
+		buyMoney [0] = 1200;
+		buyMoney [1] = 1800;
+		buyMoney [2] = 2400;
 		buyMoney [3] = 700;
 		buyMoney [4] = 300;
 		buyMoney [5] = 500;

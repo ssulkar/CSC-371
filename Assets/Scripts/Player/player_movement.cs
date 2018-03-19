@@ -28,6 +28,7 @@ public class player_movement : MonoBehaviour {
 	private float groundCheckRadius = 0.2f;
 	private bool isGrounded = false;
 
+
 	//shooting stuff
 	public Transform GunBarrel;
 	public GameObject mixTape;
@@ -115,7 +116,7 @@ public class player_movement : MonoBehaviour {
 		if (extraSpeed == 0)
 			extraSpeed = 1.0f;
 		else
-			extraSpeed = 1.5f;
+			extraSpeed = 1.2f;
 
 
 		//PHYSICS
@@ -136,7 +137,7 @@ public class player_movement : MonoBehaviour {
 		if (extraJump == 0)
 			extraJump = 1.0f;
 		else
-			extraJump = 1.5f;
+			extraJump = 1.2f;
 
 		if(isGrounded == true && Input.GetButtonDown("Jump")){
 			isGrounded = false;
