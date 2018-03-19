@@ -17,9 +17,9 @@ public class SimpleBossChase : MonoBehaviour {
 	void Start () {
 		moveBody = GetComponent<Rigidbody2D>();
 		player	= GameObject.FindGameObjectWithTag ("Player");
-		speed = 2;
+		speed = 1;
 		updatedSpeed = speed;
-		max_speed = 9;
+		max_speed = 8;
 	}
 	
 	// Update is called once per frame
@@ -33,7 +33,10 @@ public class SimpleBossChase : MonoBehaviour {
 		else
 			updatedSpeed = 1 * speed;
 
-		moveBody.velocity = new Vector2 (updatedSpeed, 0);
+		if (transform.position.x >= 178)
+			moveBody.velocity = new Vector2 (0, 0);
+		else
+			moveBody.velocity = new Vector2 (updatedSpeed, 0);
 	}
 
 

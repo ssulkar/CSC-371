@@ -7,6 +7,7 @@ public class inventoryMenu : MonoBehaviour {
 
 	public int ScoreNum;
 	public Text ScoreText;
+	public Text[] ItemMoneyText;
 	public Button[] minusItem = new Button[8]; 
 	public Button[] addItem = new Button[8]; 
 	public Image[] imagesitem = new Image[8]; 
@@ -31,14 +32,25 @@ public class inventoryMenu : MonoBehaviour {
 
 		ScoreNum = PlayerPrefs.GetInt ("money");
 
+		trackItems[0] = PlayerPrefs.GetInt ("item1");
+		trackItems[1] = PlayerPrefs.GetInt ("item2");
+		trackItems[2] = PlayerPrefs.GetInt ("item3");
 
-		for (int i = 0; i < 8; i++) {
-			if (i < 3)
-				trackItems [i] = 0;
-			else
-				trackItems [i] = -1;
-			sellMoney [i] = buyMoney[i] ;
+		ItemMoneyText[0].text = buyMoney [0].ToString();
+		ItemMoneyText[1].text = buyMoney [1].ToString();
+		ItemMoneyText[2].text = buyMoney [2].ToString();
+
+
+		for (int i = 3; i < 8; i++) {
+			trackItems [i] = -1;
+			sellMoney [i] = buyMoney [i];
 		}
+
+		for (int c = 0; c < 3; c++) {
+			sellMoney [c] = buyMoney[c];
+		}
+
+		//ScoreNum = 300;        was for testing purposes
 			
 	}
 
@@ -80,6 +92,10 @@ public class inventoryMenu : MonoBehaviour {
 	private void updateMoney()
 	{
 		PlayerPrefs.SetInt ("money", ScoreNum);
+
+		PlayerPrefs.SetInt ("item1", trackItems[0]);
+		PlayerPrefs.SetInt ("item2", trackItems[1]);
+		PlayerPrefs.SetInt ("item3", trackItems[2]);
 	}
 
 
