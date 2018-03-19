@@ -14,12 +14,12 @@ public class FadeText : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetKeyUp(KeyCode.Return))
         {
             Invoke("Restart", restartDelay);
         }
