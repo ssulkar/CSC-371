@@ -26345,7 +26345,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881327728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -94.629074, y: 2.8190851, z: -10}
+  m_LocalPosition: {x: -94.68097, y: 2.8190851, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27320,16 +27320,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114067067614739634, guid: 3472f23854daee74387c273988a609f1,
-        type: 2}
-      propertyPath: xamp
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114067067614739634, guid: 3472f23854daee74387c273988a609f1,
-        type: 2}
-      propertyPath: yamp
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3472f23854daee74387c273988a609f1, type: 2}
   m_IsPrefabParent: 0
@@ -27827,12 +27817,12 @@ MonoBehaviour:
   sil: {fileID: 2046631215}
   plat: {fileID: 1442306204}
   followerBar: {fileID: 1044066396}
-  silverTime: 50
-  goldTime: 40
-  platinumTime: 30
-  lvlComplete: LevelComplete_4
-  lvlAttempted: lvlAttempted_4
-  lvlNum: 4
+  silverTime: 60
+  goldTime: 50
+  platinumTime: 40
+  lvlComplete: LevelComplete_5
+  lvlAttempted: lvlAttempted_5
+  lvlNum: 5
   allPickups: {fileID: 964459887}
 --- !u!4 &1471439438
 Transform:
@@ -28994,7 +28984,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999041721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -94.629074, y: 2.8190851, z: -10}
+  m_LocalPosition: {x: -94.68097, y: 2.8190851, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544766956}

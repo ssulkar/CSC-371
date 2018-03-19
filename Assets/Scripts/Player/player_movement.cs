@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class player_movement : MonoBehaviour {
 
 
+	public static player_movement instance;
+
 	public Text countText;
 	public Text cloutText;
 	public Text moneyText;
@@ -26,6 +28,7 @@ public class player_movement : MonoBehaviour {
 	private float groundCheckRadius = 0.2f;
 	private bool isGrounded = false;
 
+
 	//shooting stuff
 	public Transform GunBarrel;
 	public GameObject mixTape;
@@ -34,6 +37,20 @@ public class player_movement : MonoBehaviour {
 
 	//Animations
 	private Animator playerAnim;
+
+	void Awake()
+	{ 
+		//If we don't currently have a game control...
+		if (instance == null) {
+			//...set this one to be it...
+			instance = this;
+
+		}
+		//...otherwise...
+		else if(instance != this)
+			//...destroy this one because it is a duplicate.
+			Destroy (gameObject);
+	}
 
 	void Start()
 	{
@@ -99,7 +116,7 @@ public class player_movement : MonoBehaviour {
 		if (extraSpeed == 0)
 			extraSpeed = 1.0f;
 		else
-			extraSpeed = 1.5f;
+			extraSpeed = 1.2f;
 
 
 		//PHYSICS
@@ -120,7 +137,7 @@ public class player_movement : MonoBehaviour {
 		if (extraJump == 0)
 			extraJump = 1.0f;
 		else
-			extraJump = 1.5f;
+			extraJump = 1.2f;
 
 		if(isGrounded == true && Input.GetButtonDown("Jump")){
 			isGrounded = false;
@@ -186,7 +203,7 @@ public class player_movement : MonoBehaviour {
         }*/
 	}
 
-	void checkLevelUp()
+	public void checkLevelUp()
 	{
 		// Check if Player Leveled up
 		// Need to display this to the player

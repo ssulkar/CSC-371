@@ -34,3 +34,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Assets/Scenes/Levels/Level2.unity
+Assets/Scenes/Levels/LevelLilPump.unity
+Assets/Scenes/Levels/Level6.unity
+Assets/Scenes/Levels/Level4.unity

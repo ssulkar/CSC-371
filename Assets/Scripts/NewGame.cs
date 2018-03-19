@@ -33,6 +33,21 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("LevelComplete_3", 0);
 		PlayerPrefs.SetInt ("LevelComplete_4", 0);
 		PlayerPrefs.SetInt ("LevelComplete_5", 0);
+		PlayerPrefs.SetInt ("LevelComplete_6", 0);
+		PlayerPrefs.SetInt ("LevelComplete_7", 0);
+		PlayerPrefs.SetInt ("LevelComplete_8", 0);
+
+		PlayerPrefs.SetInt ("lvlAttempted_1", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_2", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_3", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_4", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_5", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_6", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_7", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_8", 0);
+
+
+		PlayerPrefs.SetInt ("streak", 0);
 
 		SceneManager.LoadScene ("Cutscene1");
 	}

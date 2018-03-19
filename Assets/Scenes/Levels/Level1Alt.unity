@@ -13805,9 +13805,9 @@ MonoBehaviour:
   sil: {fileID: 2046631215}
   plat: {fileID: 1442306204}
   followerBar: {fileID: 558438618}
-  silverTime: 57
-  goldTime: 50
-  platinumTime: 43
+  silverTime: 63
+  goldTime: 55
+  platinumTime: 48
   lvlComplete: LevelComplete_1
   lvlAttempted: lvlAttempted_1
   lvlNum: 1
