@@ -4,4 +4,109 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu(Main).unity
+    guid: bb2c8355455274e298d2b7950cd036a3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1Alt.unity
+    guid: 1f2180ee26722c64b99c18b392ccef87
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: 6ead73bae7a1b9249b7c88d5d36a3a1e
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelLilPump.unity
+    guid: 1007710f84cbf1042b46700afa149e14
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level4.unity
+    guid: 517c382e3be7fc44e9e4b5209d78406a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level5.unity
+    guid: 123c3ab35d60947d3bad57328840bd88
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/3903e8ef118393743a0b1461995de67c
+    guid: 3903e8ef118393743a0b1461995de67c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level6.unity
+    guid: b02ff74077c1da04db4da1e5bbba787f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level7.unity
+    guid: 864dd987cb2fc3a4aafcc807bb511286
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelDrake.unity
+    guid: b283421415bf40d4f917c14c67e22e00
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/AfterShow.unity
+    guid: 4b99cd825bb127241880993f399bc686
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene1.unity
+    guid: c4110077cfd7e2842994682c9062e3fe
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene2.unity
+    guid: 47f7b6718b703b04db4af4343da42aa2
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene3.unity
+    guid: 06f83882c7b9f6d40a34e942ab29d43e
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene4.unity
+    guid: a7b5d4affaf26f948b5f2d5349e94b58
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene5.unity
+    guid: a204f5941e7713349a1c1a56b7b519c5
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene6.unity
+    guid: 280eda53c674e27479298ef67429c764
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene7.unity
+    guid: 1074fa45509db7a4db0c35321c820f02
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene8.unity
+    guid: 824e5967386787e4395ceca9b5e4fb6a
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene9.unity
+    guid: 420258c938271264cb95e2c98f50d0ac
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene10.unity
+    guid: 8b4b5b3b02319f64fa29d63d6f2614f8
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene11.unity
+    guid: 3e4df634829e95349bb01fc61b407a3c
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene12.unity
+    guid: bb427d6472d5b4143a7896cba086a051
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene13.unity
+    guid: c53359751ac351643aba014e0b94ff2a
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Cutscene14.unity
+    guid: f128c64063cf0aa4782d9cc60324a9ab
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/DrakeCutscene.unity
+    guid: ff55bb84904c4ad47b65b7378680ca1a
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/GameOver.unity
+    guid: 4191a35468ed19d48a8c9df84e3ca5f7
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/LaterThatDay.unity
+    guid: 97377a1320d17ec4bade0b4a6f760eda
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Level Locked.unity
+    guid: ffbf1901ee4ed4208b0cba495f1610c6
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/NextDay.unity
+    guid: fc8c38b7d8a9d4a41b346bf1e7130476
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/NextMorning.unity
+    guid: 4a5c2ddae829ee44b92dfae509e59d1c
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Transition.unity
+    guid: e4fb2ee2c632ffb439916aa829d3f13f
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/You Win.unity
+    guid: d8b74bdbaf77de4458a5527a8e3fb45c
+  - enabled: 1
+    path: Assets/Scenes/Menu(inbetween).unity
+    guid: aa616c59b573949d69b264bae5334bff
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: a0079d10cad398b4493d5be5dc99ba4e

@@ -45,6 +45,15 @@ public class DropdownControl : MonoBehaviour
 		if (target.value == 6) {
 			SceneManager.LoadScene(6);
 		}
+		if (target.value == 7) {
+			SceneManager.LoadScene(7);
+		}		
+		if (target.value == 8) {
+			SceneManager.LoadScene(8);
+		}
+		if (target.value == 9) {
+			SceneManager.LoadScene(9);
+		}
 
 	}
 
