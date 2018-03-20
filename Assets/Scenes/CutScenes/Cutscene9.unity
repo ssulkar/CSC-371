@@ -501,6 +501,7 @@ MonoBehaviour:
   dialogueLines:
   - 'LIL  YACHTY:  Wow  I  underestimated  your  abilities,  you''ve  earned  my  respect.
     I  will  be  watching  your  career'
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

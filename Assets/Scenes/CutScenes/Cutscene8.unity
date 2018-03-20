@@ -575,6 +575,7 @@ MonoBehaviour:
   - 'LIl  Yachty:  You  think  you  are  a  better  rapper  than  me?  Just  because  you  have  a  hit?
     I  have  way  more  clout  than  you,  know  your  place'
   - 'YOU:  Not  for  long  you  won''t,  let''s  battle'
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

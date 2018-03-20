@@ -503,7 +503,7 @@ MonoBehaviour:
   - 'YOU:  Did  you  not  see  me  bomb?  I''m  not  cut  out  for  the  rap  game'
   - 'DJ  KHALID:  You  made  of  that  special  cloth!  Let  me  give  you  the  keys! '
   - Let's  make  a  hit!!!
-  - Press  Enter  to  Continue
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

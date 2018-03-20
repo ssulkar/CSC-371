@@ -501,7 +501,7 @@ MonoBehaviour:
   dialogueLines:
   - 'YOU:  WHAT?!'
   - My  new  song  is  trending  all  over  social  media!!
-  - Press  Enter  to  Continue
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

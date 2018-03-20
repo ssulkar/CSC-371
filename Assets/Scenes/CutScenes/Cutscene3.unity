@@ -500,6 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - 'YOU:  I  made  it!  Time  to  go  see  Lil  Pump!'
+  - Press  Enter  To  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

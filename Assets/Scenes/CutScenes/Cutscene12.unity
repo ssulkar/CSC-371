@@ -502,7 +502,7 @@ MonoBehaviour:
   - 'YOU:  Maybe  I  should  give  up  on  this  rap  career'
   - An  email  from  DJ  KHalid?!
   - I  better  head  to  his  studio  before  he  changes  his  mind....
-  - Press  Enter  to  Continue
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

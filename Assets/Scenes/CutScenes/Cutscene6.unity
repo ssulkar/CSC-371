@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - 'YOU:  Posted  on  soundcloud!  Time  to  go  to  bed!'
-  - Press  Space  To  Begin
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

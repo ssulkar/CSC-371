@@ -176,7 +176,7 @@ public class CutsceneDialogue : MonoBehaviour {
         }
         else if (scene.name == "Cutscene4") // lil pump boss battle
         {
-            SceneManager.LoadScene("Cutscene5");
+            SceneManager.LoadScene("LevelLilPump");
         }
         else if (scene.name == "Cutscene5")
         {

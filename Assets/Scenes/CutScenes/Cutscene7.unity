@@ -503,7 +503,7 @@ MonoBehaviour:
   - What's  this  email?
   - 'EMAIL:  We  have  heard  your  new  song  on  soundcloud  and  would  like  to  offer  you  the  chance  to  open  up  for  Lil  Yachty  tonight'
   - 'YOU:  My  first  performance?  Time  to  get  a  serious  clout  boost! I  better  leave  now!'
-  - Press  Space  To  Begin
+  - Press  Enter  to  Begin
   delay: 0
   multiplier: 0
   DialogueInput: 13

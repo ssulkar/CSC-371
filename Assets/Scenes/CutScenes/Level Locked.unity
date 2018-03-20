@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 1564951974}
   - component: {fileID: 1564951976}
   - component: {fileID: 1564951975}
+  - component: {fileID: 1564951977}
   m_Layer: 0
   m_Name: Instruction
   m_TagString: Untagged
@@ -507,13 +508,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: PRESS SPACE TO CONTINUE
+  m_Text: PRESS  Enter  TO  CONTINUE
 --- !u!222 &1564951976
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1564951973}
+--- !u!114 &1564951977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564951973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462c8fb69b6667d47b3e8bb77c68de7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040453873
 GameObject:
   m_ObjectHideFlags: 0
