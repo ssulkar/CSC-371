@@ -573,7 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - 'LIl  Yachty:  You  think  you  are  a  better  rapper  than  me?  Just  because  you  have  a  hit?
-    I  have  way  more  clout  than  you,  know  your  place'
+    I  have  way  more  clout  than  you!'
   - 'YOU:  Not  for  long  you  won''t,  let''s  battle'
   - Press  Enter  to  Begin
   delay: 0

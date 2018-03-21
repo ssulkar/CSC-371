@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿/* This entire script was written by Michael Lozada */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +12,7 @@ public class CutsceneDialogue : MonoBehaviour {
     public float delay; // seconds between characters
     public float multiplier; // increase speed when key held
 
-    public KeyCode DialogueInput = KeyCode.Return;
+    public KeyCode DialogueInput = KeyCode.Return; // progresses dialogue to next element in array
 
     private bool stringShown;
     private bool dialoguePlaying;
@@ -157,6 +159,8 @@ public class CutsceneDialogue : MonoBehaviour {
         instruction.SetActive(true);
     }
 
+
+    // loads the correct level or cutscene dependent on where the user is in the story
     void Complete()
     {
         Scene scene = SceneManager.GetActiveScene();
@@ -216,9 +220,9 @@ public class CutsceneDialogue : MonoBehaviour {
         }
         else if (scene.name == "Cutscene14")
         {
-            SceneManager.LoadScene("Transition");
+            SceneManager.LoadScene("DrakeCutscene");
         }
-        else if (scene.name == "Drakecutscene")
+        else if (scene.name == "DrakeCutscene")
         {
             SceneManager.LoadScene("LevelDrake");
         }

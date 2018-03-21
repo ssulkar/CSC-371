@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿/* This entire script was written by Michael Lozada */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +17,7 @@ public class DialogueHolder: MonoBehaviour {
     }
 	
 	// Update is called once per frame
+    // fills the dialogue array with a specific tutorial instruction for level 1
 	void Update ()
     {
         if(name == "Sign1")
@@ -39,6 +42,7 @@ public class DialogueHolder: MonoBehaviour {
         }
     }
 
+    // when Return pressed, displays dialogue in game
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.name == "Player")
@@ -55,6 +59,8 @@ public class DialogueHolder: MonoBehaviour {
         }
     }
 
+
+    // fills dilogue array with the instructions for level 1 tutorial signs
     public void fillDialogue(int sign)
     {
         if(sign == 1)

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿/* This entire script was written by Michael Lozada */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

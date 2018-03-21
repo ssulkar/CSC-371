@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿/* This entire script was written by Michael Lozada */
+
+using UnityEngine;
 using System.Collections;
 
 public class FadeScene : MonoBehaviour

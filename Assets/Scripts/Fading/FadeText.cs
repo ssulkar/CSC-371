@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿/* This entire script was written by Michael Lozada */
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -14,6 +16,7 @@ public class FadeText : MonoBehaviour
 
     void Update()
     {
+        // when Return Key hit, intializes Coroutine to Fade text in
         if (Input.GetKeyDown(KeyCode.Return))
         {
             StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
@@ -26,7 +29,7 @@ public class FadeText : MonoBehaviour
     }
 
 
-
+    // Fade in text
     public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
@@ -37,6 +40,7 @@ public class FadeText : MonoBehaviour
         }
     }
 
+    // Fade out text 
     public IEnumerator FadeTextToZeroAlpha(float t, Text i)
     {
         i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
@@ -47,6 +51,7 @@ public class FadeText : MonoBehaviour
         }
     }
 
+    // loads correct scene after transition scene is complete
     void Restart()
     {
         Scene scene = SceneManager.GetActiveScene();

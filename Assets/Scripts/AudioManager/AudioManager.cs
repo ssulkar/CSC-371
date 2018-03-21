@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿/* This entire script was written by Michael Lozada */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +19,7 @@ public class AudioManager : MonoBehaviour {
 		
 	}
 
+    // stops current song, loads new one and plays 
     public void changeMusic(AudioClip music2)
     {
         //if same music clip do not restart

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/* This script was written by Michael Lozada, Shiv Sulkar, and Aidan Hartnett
+ * Michael wrote the intial bulk of the code and Aidan and Shiv made changes to refine
+ * the physics and movement within the game
+ * In general this piece of code was a massive collaborative effort
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -68,7 +74,7 @@ public class player_movement : MonoBehaviour {
 	}
 
 
-	// Update is called once per frame
+	// Update is called once per frame; Michael Lozada
 	void Update () {
 		float currentSpeed = Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x);
 		playerAnim.SetFloat ("speed", Mathf.Abs(currentSpeed));
@@ -123,6 +129,7 @@ public class player_movement : MonoBehaviour {
 		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed * extraSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 	}
 	/*
+     *  Michael Lozada
     void Jump()
     {
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
@@ -188,11 +195,14 @@ public class player_movement : MonoBehaviour {
 
 			Destroy(other.gameObject);
         }
+
+        // Michael Lozada
         else if (other.gameObject.CompareTag("music"))
         {
             other.gameObject.SetActive(false);
         }
 
+        // Michael Lozada
         else if (other.gameObject.CompareTag("finish"))
         {
             TimeController.instance.AfterFinish();
@@ -233,9 +243,11 @@ public class player_movement : MonoBehaviour {
 		moneyText.text = "$ " + PlayerPrefs.GetInt("money").ToString ();
 	}
 
+    // Michael Lozada
 	IEnumerator TestCoroutine()
 	{
         playerSpeed = 0;
+        playerJumpPower = 0;
         yield return new WaitForSeconds(12);
 		SceneManager.LoadScene("Menu(inbetween)");
 
