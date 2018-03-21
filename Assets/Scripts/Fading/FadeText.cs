@@ -60,6 +60,14 @@ public class FadeText : MonoBehaviour
         {
             SceneManager.LoadScene("Cutscene7");
         }
+		else if (string.Equals(scene.name, "LaterThatDay"))
+		{
+			SceneManager.LoadScene("Cutscene12");
+		}
+		else if (string.Equals(scene.name, "NextMorning"))
+		{
+			SceneManager.LoadScene("Cutscene14");
+		}
         else
         {
 			SceneManager.LoadScene("Menu(inbetween)");

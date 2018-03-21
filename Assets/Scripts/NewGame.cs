@@ -36,6 +36,7 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("LevelComplete_6", 0);
 		PlayerPrefs.SetInt ("LevelComplete_7", 0);
 		PlayerPrefs.SetInt ("LevelComplete_8", 0);
+		PlayerPrefs.SetInt ("LevelComplete_9", 0);
 
 		PlayerPrefs.SetInt ("lvlAttempted_1", 0);
 		PlayerPrefs.SetInt ("lvlAttempted_2", 0);
@@ -45,6 +46,7 @@ public class NewGame : MonoBehaviour {
 		PlayerPrefs.SetInt ("lvlAttempted_6", 0);
 		PlayerPrefs.SetInt ("lvlAttempted_7", 0);
 		PlayerPrefs.SetInt ("lvlAttempted_8", 0);
+		PlayerPrefs.SetInt ("lvlAttempted_9", 0);
 
 
 		PlayerPrefs.SetInt ("streak", 0);

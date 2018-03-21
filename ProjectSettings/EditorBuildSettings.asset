@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/__DELETED_GUID_Trash/3903e8ef118393743a0b1461995de67c
     guid: 3903e8ef118393743a0b1461995de67c
   - enabled: 1
+    path: Assets/Scenes/Levels/LevelYachty.unity
+    guid: 0c1ba3f44f9aa8445844d5084264b63c
+  - enabled: 1
     path: Assets/Scenes/Levels/Level6.unity
     guid: b02ff74077c1da04db4da1e5bbba787f
   - enabled: 1
@@ -98,7 +101,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutScenes/NextMorning.unity
     guid: 4a5c2ddae829ee44b92dfae509e59d1c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CutScenes/Transition.unity
     guid: e4fb2ee2c632ffb439916aa829d3f13f
   - enabled: 1

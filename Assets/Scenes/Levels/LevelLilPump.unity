@@ -1431,9 +1431,9 @@ MonoBehaviour:
   silverTime: 50
   goldTime: 40
   platinumTime: 30
-  lvlComplete: LevelComplete_1
-  lvlAttempted: 
-  lvlNum: 1
+  lvlComplete: LevelComplete_3
+  lvlAttempted: lvlAttempted_3
+  lvlNum: 3
   allPickups: {fileID: 0}
 --- !u!4 &1471439438
 Transform:

@@ -192,7 +192,7 @@ public class CutsceneDialogue : MonoBehaviour {
         }
         else if (scene.name == "Cutscene8") // lil yachty boss battle
         {
-            SceneManager.LoadScene("Level5");
+			SceneManager.LoadScene("LevelYachty");
         }
         else if (scene.name == "Cutscene9")
         {

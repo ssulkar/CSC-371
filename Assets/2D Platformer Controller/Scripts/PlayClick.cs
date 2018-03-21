@@ -59,28 +59,37 @@ public class PlayClick : MonoBehaviour {
 			}
 		}
 
-		//YACHTY GOES HERE WITH LEVEL LOCK
-		//CHANGE NUMBERS AFTER
-
 		else if(lvl == 6){
-			if (PlayerPrefs.GetInt ("lvlAttempted_6") == 0) {	
-				SceneManager.LoadScene ("Cutscene9");
+			if (playerlvl < 3) {
+				SceneManager.LoadScene ("Level Locked");
 			} else {
-				SceneManager.LoadScene (6);
+				if (PlayerPrefs.GetInt ("lvlAttempted_6") == 0) {	
+					SceneManager.LoadScene ("Cutscene8");
+				} else {
+					SceneManager.LoadScene (6);
+				}
 			}
 		}
+
 		else if(lvl == 7){
 			if (PlayerPrefs.GetInt ("lvlAttempted_7") == 0) {	
-				SceneManager.LoadScene ("LaterThatDay");
+				SceneManager.LoadScene ("Cutscene9");
 			} else {
 				SceneManager.LoadScene (7);
 			}
 		}
 		else if(lvl == 8){
-			if (PlayerPrefs.GetInt ("lvlAttempted_7") == 0) {	
-				SceneManager.LoadScene ("Cutscene13");
+			if (PlayerPrefs.GetInt ("lvlAttempted_8") == 0) {	
+				SceneManager.LoadScene ("LaterThatDay");
 			} else {
 				SceneManager.LoadScene (8);
+			}
+		}
+		else if(lvl == 9){
+			if (PlayerPrefs.GetInt ("lvlAttempted_9") == 0) {	
+				SceneManager.LoadScene ("Cutscene13");
+			} else {
+				SceneManager.LoadScene (9);
 			}
 		}
 	}
