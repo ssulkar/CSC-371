@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/* This entire script was written by Aidan Hartnett */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,8 +17,7 @@ public class NewGame : MonoBehaviour {
 
 	void TaskOnClick()
 	{
-		//reset all attributes and load level one
-		//will need to reset available levels
+		//reset all attributes for a new game and load level one
 		PlayerPrefs.SetInt ("money", 0);
 		PlayerPrefs.SetInt ("followers", 0);
 		PlayerPrefs.SetInt ("level", 0);

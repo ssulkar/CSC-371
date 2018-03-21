@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Written mostly by Shiv and Aidan, individual functions marked
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,6 +38,7 @@ public class playerHealth : MonoBehaviour {
 		}
 	}
 
+	//Aidan
 	public void addDamage(float damage){
 
 		if (freeHit == 0)
@@ -61,6 +63,7 @@ public class playerHealth : MonoBehaviour {
 		}
 	}
 
+	//Aidan
 	void playerDeath () {
 		PlayerPrefs.SetInt ("level", cloutlvl);
 		PlayerPrefs.SetInt ("followers", fol);

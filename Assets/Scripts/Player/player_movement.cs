@@ -58,6 +58,7 @@ public class player_movement : MonoBehaviour {
 			Destroy (gameObject);
 	}
 
+
 	void Start()
 	{
 		count = 0;
@@ -117,7 +118,7 @@ public class player_movement : MonoBehaviour {
 			FlipPlayer ();
 		}
 
-		// extra movement speed
+		// Aidan/Carlos
 		float extraSpeed = PlayerPrefs.GetInt ("item1");
 		if (extraSpeed == 0)
 			extraSpeed = 1.0f;
@@ -140,6 +141,7 @@ public class player_movement : MonoBehaviour {
 	void Jump(){
 		//if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
 
+		//Aidan/Carlos
 		//added extra jump for item effect
 		float extraJump = PlayerPrefs.GetInt ("item3");
 		if (extraJump == 0)
@@ -177,6 +179,7 @@ public class player_movement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		//Aidan
         if (other.gameObject.CompareTag("token"))
         {
             other.gameObject.SetActive(false);
@@ -186,7 +189,7 @@ public class player_movement : MonoBehaviour {
             SetCountText();
         }
 
-		//Shiv
+		//Shiv/Aidan
         else if (other.gameObject.CompareTag("Money"))
         {
             other.gameObject.SetActive(false);
@@ -215,6 +218,7 @@ public class player_movement : MonoBehaviour {
         }*/
 	}
 
+	//Aidan
 	public void checkLevelUp()
 	{
 		// Check if Player Leveled up
@@ -232,18 +236,20 @@ public class player_movement : MonoBehaviour {
 		}
 	}
 
+
 	void SetCountText()
 	{
 		countText.text = "Clout: " + PlayerPrefs.GetInt("followers").ToString();
 
 	}
 
-
+	//Aidan
 	void SetMoneyText() {
 		moneyText.text = "$ " + PlayerPrefs.GetInt("money").ToString ();
 	}
 
     // Michael Lozada
+	// If else by Aidan
 	IEnumerator TestCoroutine()
 	{
 		Scene scene = SceneManager.GetActiveScene();

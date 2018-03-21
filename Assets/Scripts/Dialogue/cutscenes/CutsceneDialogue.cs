@@ -1,4 +1,5 @@
 ﻿/* This entire script was written by Michael Lozada */
+/* With edits by Aidan to the complete function to load levels in the right order*/
 
 using System.Collections;
 using System.Collections.Generic;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/* This entire script was written by Aidan Hartnett */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,9 @@ public class PlayClick : MonoBehaviour {
 		btn.onClick.AddListener(TaskOnClick);
 	}
 
+
+	//Loads the correct level the player is on, Boss levels are level locked to encourage time trials
+	//Only loads cutscene if the player has not attempted the level
 	void TaskOnClick()
 	{
 		int lvl = PlayerPrefs.GetInt("currentLevel");

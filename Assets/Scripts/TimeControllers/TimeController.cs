@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿/* This entire script was written by Aidan Hartnett */
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -126,12 +127,11 @@ public class TimeController : MonoBehaviour {
 				return;
 			Clock.enabled = false;
 
-			//CHANGE TO REFLECT WHAT LEVEL THIS SCRIPT IS FOR
 			int followersGained;
-			//CHANGE FOR EACH LEVEL
+		
 
 			//if else block to display to the player what time goal they hit
-			//should also be used in the future to award experience to the player
+			//also awards experience to the player
 			if (clockTime <= platinumTime) {
 				//score = score + 1000;
 				followersGained = lvlNum * 50;
