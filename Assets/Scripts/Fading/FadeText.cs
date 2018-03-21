@@ -73,6 +73,10 @@ public class FadeText : MonoBehaviour
 		{
 			SceneManager.LoadScene("Cutscene14");
 		}
+        else if (string.Equals(scene.name, "You Win"))
+        {
+            SceneManager.LoadScene("Menu(Main)");
+        }
         else
         {
 			SceneManager.LoadScene("Menu(inbetween)");
