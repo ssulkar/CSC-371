@@ -246,11 +246,15 @@ public class player_movement : MonoBehaviour {
     // Michael Lozada
 	IEnumerator TestCoroutine()
 	{
+		Scene scene = SceneManager.GetActiveScene();
         playerSpeed = 0;
         playerJumpPower = 0;
         yield return new WaitForSeconds(12);
-		SceneManager.LoadScene("Menu(inbetween)");
-
+		if (string.Equals (scene.name, "LevelDrake")) {
+			SceneManager.LoadScene ("You Win");
+		} else {
+			SceneManager.LoadScene ("Menu(inbetween)");
+		}
 	}
 
     public void reloadCurrentScene()

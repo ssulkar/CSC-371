@@ -86,10 +86,14 @@ public class PlayClick : MonoBehaviour {
 			}
 		}
 		else if(lvl == 9){
-			if (PlayerPrefs.GetInt ("lvlAttempted_9") == 0) {	
-				SceneManager.LoadScene ("Cutscene13");
-			} else {
-				SceneManager.LoadScene (9);
+			if (playerlvl < 4) {
+				SceneManager.LoadScene ("Level Locked");
+			}else{
+				if (PlayerPrefs.GetInt ("lvlAttempted_9") == 0) {	
+					SceneManager.LoadScene ("Cutscene13");
+				} else {
+					SceneManager.LoadScene (9);
+				}
 			}
 		}
 	}
