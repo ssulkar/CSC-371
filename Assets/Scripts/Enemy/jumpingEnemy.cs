@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class jumpingEnemy : MonoBehaviour {
-
+	//Shiv
 	public float jumpHeight;
 	public float jumpRate;
 	public float coolDown;

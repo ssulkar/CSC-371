@@ -79,7 +79,7 @@ public class player_movement : MonoBehaviour {
 			FireMixtape ();
 		}
 	}
-
+	//Shiv
 	//shooting stuff
 	void FireMixtape(){
 		if (Time.time > coolDown) {
@@ -128,7 +128,8 @@ public class player_movement : MonoBehaviour {
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
         isGrounded = false;
     }*/
-
+	
+	//Shiv
 	void Jump(){
 		//if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)){
 
@@ -178,6 +179,7 @@ public class player_movement : MonoBehaviour {
             SetCountText();
         }
 
+		//Shiv
         else if (other.gameObject.CompareTag("Money"))
         {
             other.gameObject.SetActive(false);
