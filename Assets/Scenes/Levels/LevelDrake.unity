@@ -919,6 +919,11 @@ Prefab:
       propertyPath: m_Name
       value: Trampoline (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 114695441505976474, guid: 30be2c0bb1e562d4593e9104330ddef0,
+        type: 2}
+      propertyPath: jumpForce
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30be2c0bb1e562d4593e9104330ddef0, type: 2}
   m_IsPrefabParent: 0
@@ -1302,6 +1307,11 @@ Prefab:
       propertyPath: m_Name
       value: Trampoline (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114695441505976474, guid: 30be2c0bb1e562d4593e9104330ddef0,
+        type: 2}
+      propertyPath: jumpForce
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30be2c0bb1e562d4593e9104330ddef0, type: 2}
   m_IsPrefabParent: 0
@@ -1619,6 +1629,11 @@ Prefab:
       propertyPath: m_Name
       value: Trampoline (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114695441505976474, guid: 30be2c0bb1e562d4593e9104330ddef0,
+        type: 2}
+      propertyPath: jumpForce
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30be2c0bb1e562d4593e9104330ddef0, type: 2}
   m_IsPrefabParent: 0
@@ -1773,7 +1788,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881327728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.09708, y: 13.609085, z: -10}
+  m_LocalPosition: {x: -84.014824, y: 13.609085, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25682,7 +25697,7 @@ Prefab:
     - target: {fileID: 114695441505976474, guid: 30be2c0bb1e562d4593e9104330ddef0,
         type: 2}
       propertyPath: jumpForce
-      value: 65
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30be2c0bb1e562d4593e9104330ddef0, type: 2}
@@ -26416,6 +26431,11 @@ Prefab:
     - target: {fileID: 1388694728832974, guid: 30be2c0bb1e562d4593e9104330ddef0, type: 2}
       propertyPath: m_Name
       value: Trampoline (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114695441505976474, guid: 30be2c0bb1e562d4593e9104330ddef0,
+        type: 2}
+      propertyPath: jumpForce
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30be2c0bb1e562d4593e9104330ddef0, type: 2}
@@ -27401,7 +27421,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999041721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.09708, y: 13.609085, z: -10}
+  m_LocalPosition: {x: -84.014824, y: 13.609085, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544766956}
