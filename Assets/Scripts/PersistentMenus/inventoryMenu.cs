@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//this was written by Carlos Hernandez
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -169,6 +170,9 @@ public class inventoryMenu : MonoBehaviour {
 		updateMoney ();
 	}
 
+	/*
+	 * this part wasnt used
+	 * 
 	public void press_button4minus()
 	{
 		int button = 4-1;
@@ -275,7 +279,8 @@ public class inventoryMenu : MonoBehaviour {
 		ScoreNum -= buyMoney [button];
 		trackItems [button] = type;
 	}
-		
+
+*/
 
 	private void printScore(){
 		ScoreText.text = ScoreNum.ToString();

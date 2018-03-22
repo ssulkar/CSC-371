@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//this was written by Carlos Hernandez
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,5 +32,3 @@ public class jumpParticle : MonoBehaviour {
 }
 
 
-
-// possible particles for items gold teeth = shield/more hp, shoes = higher jump, other?
